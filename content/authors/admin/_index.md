@@ -36,6 +36,37 @@ education:
     - course: 待填写学位
       institution: 待填写学校
       year: 待填写年份
+      area: '待填写专业领域'
+
+# Work experience
+work:
+  - position: 待填写职位
+    company_name: 待填写公司
+    company_url: ''
+    company_logo: ''
+    date_start: '2023-01-01'
+    date_end: ''
+    area: '待填写领域'
+    summary: |
+      待填写工作描述
+
+# Skills
+skills:
+
+# Awards
+awards:
+  - title: 待填写奖项
+    date: '2023-01-01'
+    awarder: 待填写机构
+    summary: |
+      待填写奖项描述
+
+# Languages
+languages:
+  - name: 中文
+    percent: 100
+  - name: English
+    percent: 75
 
 # Social/Academic Networking
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
