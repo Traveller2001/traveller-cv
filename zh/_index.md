@@ -31,8 +31,8 @@ sections:
       title: 最新动态
       subtitle: ''
       text: |
-        - **2025年5月** 一篇论文 "[*ShortGPT*](content/publication/shortgpt-acl2025/)" 被 ACL Findings 2025 接收。
-        - **2024年9月** 一篇论文 "[*Base of RoPE Bounds Context Length*](content/publication/base-of-rope-neurips2024/)" 被 NeurIPS 2024 接收。
+        - **2025年5月** 一篇论文 "[*ShortGPT*](publication/shortgpt-acl2025/)" 被 ACL Findings 2025 接收。
+        - **2024年9月** 一篇论文 "[*Base of RoPE Bounds Context Length*](publication/base-of-rope-neurips2024/)" 被 NeurIPS 2024 接收。
         - **2024年6月** 荣获福州大学“优秀毕业生”称号。
         - **2023年5月** 荣获第十届ASC世界大学生超级计算机竞赛一等奖。
         - **2022年11月** 荣获第十三届全国大学生数学竞赛一等奖。
