@@ -80,18 +80,6 @@ sections:
       columns: '2'
 
   - block: collection
-    id: projects
-    content:
-      title: Projects
-      filters:
-        folders:
-          - project
-    design:
-      # Choose a view for the collection: card, compact, stream, showcase.
-      view: card
-      columns: '2'
-      
-  - block: collection
     id: publications
     content:
       title: Recent Publications
@@ -103,6 +91,19 @@ sections:
     design:
       columns: '2'
       view: citation
+
+  - block: collection
+    id: projects
+    content:
+      title: Projects
+      filters:
+        folders:
+          - project
+    design:
+      # Choose a view for the collection: card, compact, stream, showcase.
+      view: card
+      columns: '2'
+      
 
   - block: contact
     id: contact

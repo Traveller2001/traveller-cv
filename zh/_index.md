@@ -1,140 +1,125 @@
 ---
-# Leave the homepage title empty to use the site title
-title: '陈宇豪 - 中科大自然语言处理与人工智能硕士研究生'
-date: 2022-10-24
+# 主页标题将默认使用网站标题，此处留空
+title: '张清宇 (Qingyu Zhang)'
+date: 2025-08-05
 type: landing
 
-# # SEO description for homepage
-# description: 'Yuhao Chen - Master''s student in Natural Language Processing and Large Language Models at University of Science and Technology of China (USTC). Research focus on enhancing reasoning capabilities of LLMs, document analysis, social media understanding, and strategic reasoning tasks.'
+# SEO (搜索引擎优化) 描述
+description: '张清宇 - 中国科学院软件研究所硕士生。研究方向为大语言模型，包括长文本能力和多轮对话能力。'
 
-# # SEO keywords
-# keywords:
-#   - Natural Language Processing
-#   - Large Language Models
-#   - USTC
-#   - Document Analysis
-#   - Social Media Understanding
-#   - Multimodal Intelligence
-#   - Reinforcement Learning
-#   - Strategic Reasoning
-#   - Academic Research
-#   - Artificial Intelligence
-#   - Machine Learning
+# SEO 关键词
+keywords:
+  - 大语言模型
+  - 模型压缩
+  - 长文本
+  - 预训练后微调
+  - 强化学习
+  - 中科院软件所
+  - 张清宇
 
 sections:
   - block: about.biography
     id: about
     content:
       title: 个人简介
+      # 用户名指向 `content/authors/admin/` 文件夹中的作者配置
       username: admin
-  # - block: skills
-  #   id: skills
-  #   content:
-  #     title: Skills
-  #     text: ''
-  #     username: admin
-  #   design:
-  #     columns: '1'
-  
-  # - block: experience
-  #   content:
-  #     title: Experience
-  #     # Date format for experience
-  #     #   Refer to https://docs.hugoblox.com/customization/#date-format
-  #     date_format: Jan 2006
-  #     # Experiences.
-  #     #   Add/remove as many `experience` items below as you like.
-  #     #   Required fields are `title`, `company`, and `date_start`.
-  #     #   Leave `date_end` empty if it's your current employer.
-  #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-  #     items:
-  #       - title: CEO
-  #         company: GenCoin
-  #         company_url: ''
-  #         company_logo: org-gc
-  #         location: California
-  #         date_start: '2021-01-01'
-  #         date_end: ''
-  #         description: |2-
-  #             Responsibilities include:
 
-  #             * Analysing
-  #             * Modelling
-  #             * Deploying
-  #       - title: Professor of Semiconductor Physics
-  #         company: University X
-  #         company_url: ''
-  #         company_logo: org-x
-  #         location: California
-  #         date_start: '2016-01-01'
-  #         date_end: '2020-12-31'
-  #         description: Taught electronic engineering and researched semiconductor physics.
-  #   design:
-  #     columns: '2'
   - block: markdown
     id: news
     content:
-      title: 最新消息
-      subtitle: ""
+      title: 最新动态
+      subtitle: ''
       text: |
-            - **2025年6月25日** 一篇论文 "[Streamlining the Collaborative Chain of Models into A Single Forward Pass in Generation-Based Tasks](https://arxiv.org/abs/2502.11083)" 被 ACL 2025 接收。
-            - **2024年9月23日** 荣获2024年度一等奖学金。
-            - **2024年5月29日** 荣获福州大学优秀毕业生称号。
-            - **2024年3月27日** 一篇论文 "[基于大语言模型的隐式语义增强细粒度假新闻检测方法](https://crad.ict.ac.cn/cn/article/doi/10.7544/issn1000-1239.202330967?viewType=HTML)" 被《计算机研究与发展》接收。
-            - **2023年12月20日** 荣获2023年度国家奖学金。  
-
+        - **2025年5月** 一篇论文 "[*ShortGPT*](content/publication/shortgpt-acl2025/)" 被 ACL Findings 2025 接收。
+        - **2024年9月** 一篇论文 "[*Base of RoPE Bounds Context Length*](content/publication/base-of-rope-neurips2024/)" 被 NeurIPS 2024 接收。
+        - **2024年6月** 荣获福州大学“优秀毕业生”称号。
+        - **2023年5月** 荣获第十届ASC世界大学生超级计算机竞赛一等奖。
+        - **2022年11月** 荣获第十三届全国大学生数学竞赛一等奖。
     design:
       view: compact
       columns: '2'
-      
-  
-      
-  - block: collection
-    id: section-collection
+
+  - block: experience
+    id: experience
     content:
-      title: 近期发表
+      title: 实习经历
+      date_format: Jan 2006
+      # 在下方添加/删除经历条目
+      items:
+        - title: 算法实习生
+          company: 美团
+          company_url: 'https://www.meituan.com/'
+          location: 中国, 北京
+          date_start: '2024-12-01'
+          date_end: ''
+          description: |2-
+              * 主导研发了基于强化学习的大模型对话优化系统。
+              * 系统在真实业务场景上线，核心业务转化率提升约20%。
+              * 相关研究成果已投稿至 AAAI 2026。
+        - title: 基座模型实习生
+          company: 百川智能
+          company_url: 'https://www.baichuan-ai.com/'
+          location: 中国, 北京
+          date_start: '2024-01-01'
+          date_end: '2024-10-31'
+          description: |2-
+              * 探究Transformer模型冗余性，提出基于层的剪枝方法 (**ShortGPT**, *ACL Findings*, 2025)。
+              * 研究RoPE位置编码的Base下界 (**Base of RoPE Bounds Context Length**, *NeurIPS*, 2024)。
+              * 提出“大海捞针”评测的变体方法（专利已授权）。
+        - title: 科研实习生
+          company: 中国科学院软件研究所
+          company_url: 'http://www.iscas.ac.cn/'
+          location: 中国, 北京
+          date_start: '2023-10-01'
+          date_end: '2024-09-30'
+          description: |2-
+              * 为Megatron框架适配并优化SFT和DPO算法 (*ACL Demo*, 2025)。
+              * 使用ModelLink框架，在昇腾910b上实现大规模分布式训练。
+    design:
+      columns: '2'
+
+  - block: collection
+    id: publications
+    content:
+      title: 近期论文
+      text: "此处展示近期发表的论文，完整列表请见我的简历。"
       filters:
         folders:
           - publication
-        exclude_featured: true
+        exclude_featured: false
     design:
       columns: '2'
       view: citation
 
+  - block: collection
+    id: projects
+    content:
+      title: 项目经历
+      filters:
+        folders:
+          - project
+    design:
+      # 视图样式: card, compact, stream, showcase
+      view: card
+      columns: '2'
+      
   - block: contact
     id: contact
     content:
       title: 联系方式
-      
-      email: isyuhaochen@mail.ustc.edu.cn
+      email: ttraveller2001@gmail.com
       address:
-        street: 安徽省合肥市高新区复兴路100号
-        city: 合肥
-        region: 安徽, 中国
-        postcode: '230094'
-      office_hours:
-        - '周一至周五 08:00 至 22:00'
-        - '周六至周日 10:00 至 18:00'
-      coordinates: 
-        latitude: '31.82057311201721'
-        longitude: '117.1250753555994'  
+        street: 中关村南四街4号
+        city: 北京
+        region: 海淀区
+        postcode: '100190'
+        country: 中国
+        country_code: CN
+      coordinates:
+        latitude: '39.9837'
+        longitude: '116.327'
       autolink: true
     design:
       columns: '2'
-
-  # 
-  # - block: collection
-  #   id: featured
-  #   content:
-  #     title: Featured Publications
-  #     filters:
-  #       folders:
-  #         - publication
-  #       featured_only: true
-  #   design:
-  #     columns: '2'
-  #     view: card
-
-  
-  
 ---
