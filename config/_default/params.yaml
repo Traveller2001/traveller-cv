@@ -98,9 +98,6 @@ features:
     provider: 'mapnik'
     api_key: ''
     zoom: 15
-  language:
-    # Show language chooser?
-    switcher: true
 
 # Extensions
 
