@@ -37,7 +37,7 @@ interests:
 # Education to show in About widget
 education:
   courses:
-    - course: Master Student in Computer Science and Technology
+    - course: M.S. in Computer Science and Technology
       institution: Institute of Software Chinese Academy of Sciences
       year: 2024 - Present
     - course: B.S. in Computer Science and Technology
@@ -92,7 +92,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:ttraveller2001@gmail.com'
+    link: '/#contact'
   # - icon: twitter
   #   icon_pack: fab
   #   link: https://twitter.com/GeorgeCushen
@@ -133,6 +133,5 @@ highlight_name: true
 #   - Academic Research
 ---
 
-I'm Qingyu Zhang, a first-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My research focuses on large language models. 
+I'm Qingyu Zhang, a first-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My research focuses on large language models, including long-text capabilities and multi-turn dialogue abilities.
 {style="text-align: justify;"}
-

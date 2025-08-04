@@ -19,7 +19,7 @@ doi: ''
 
 publishDate: '2024-09-20T00:00:00Z'
 
-publication_types: ['1']
+publication_types: ['Conference']
 
 publication: In *Conference on Neural Information Processing Systems (NeurIPS 2024)*
 publication_short: In *NeurIPS 2024*

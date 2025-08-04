@@ -14,7 +14,7 @@ main:
     url: '#news'
     weight: 20
   - name: Publications
-    url: '#section-collection'
+    url: '#publications'
     weight: 25
   - name: Contact
     url: '#contact'

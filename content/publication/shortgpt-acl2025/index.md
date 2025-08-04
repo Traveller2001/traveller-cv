@@ -1,10 +1,10 @@
 ---
 title: "ShortGPT: Layers in Large Language Models are More Redundant Than You Expect"
 authors:
-- Xin Men*
-- Mingyu Xu*
-- {admin}* # This will link to your profile (Qingyu Zhang)
-- Qianhao Yuan*
+- Xin Men
+- Mingyu Xu
+- admin # This will link to your profile (Qingyu Zhang)
+- Qianhao Yuan
 - Bingning Wang
 - Hongyu Lin
 - Yaojie Lu
