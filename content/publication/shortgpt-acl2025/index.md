@@ -17,6 +17,7 @@ author_notes:
 - "Equal contribution"
 - "Equal contribution"
 - "Equal contribution"
+- "Corresponding author"
 
 date: '2025-05-01T00:00:00Z' # Publication date
 doi: ''
@@ -46,7 +47,7 @@ featured: true
 image:
   caption: 'Overview of ShortGPT'
   focal_point: ''
-  preview_only: true
+  preview_only: false
 
 # links:
 # - name: Custom Link

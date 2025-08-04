@@ -35,6 +35,11 @@ tags:
   - RoPE
 featured: true
 
+image:
+  caption: 'Context length and its corresponding lower bound of RoPE’s base value.'
+  focal_point: ''
+  preview_only: false
+
 url_pdf: 'https://papers.nips.cc/paper_files/paper/2024/file/9f12dd32d552f3ad9eaa0e9dfec291be-Paper-Conference.pdf'
 # url_code: ''
 ---
