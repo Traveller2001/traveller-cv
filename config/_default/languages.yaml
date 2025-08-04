@@ -25,7 +25,7 @@ zh:
         url: '#news'
         weight: 20
       - name: 近期发表
-        url: '#section-collection'
+        url: '#publications'
         weight: 25
       - name: 联系方式
         url: '#contact'

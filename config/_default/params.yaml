@@ -69,7 +69,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/isqingyuzhang/isqingyuzhang.github.io'
+    url: 'https://github.com/traveller2001/isqingyuzhang.github.io'
     content_dir: content
     branch: main
   avatar:
@@ -98,6 +98,9 @@ features:
     provider: 'mapnik'
     api_key: ''
     zoom: 15
+  language:
+    # Show language chooser?
+    switcher: true
 
 # Extensions
 
