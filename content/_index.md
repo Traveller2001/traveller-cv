@@ -1,102 +1,105 @@
 ---
 # Leave the homepage title empty to use the site title
-title: 'Yuhao Chen'
-date: 2022-10-24
+title: 'Qingyu Zhang'
+date: 2024-08-05
 type: landing
 
-# # SEO description for homepage
-# description: 'Yuhao Chen - Master''s student in Natural Language Processing and Large Language Models at University of Science and Technology of China (USTC). Research focus on enhancing reasoning capabilities of LLMs, document analysis, social media understanding, and strategic reasoning tasks.'
+# SEO description for homepage
+description: 'Qingyu Zhang - Master''s student at the Institute of Software, Chinese Academy of Sciences (ISCAS). Research interests in Large Language Models, including model compression, long-context, and efficient training/inference.'
 
-# # SEO keywords
-# keywords:
-#   - Natural Language Processing
-#   - Large Language Models
-#   - USTC
-#   - Document Analysis
-#   - Social Media Understanding
-#   - Multimodal Intelligence
-#   - Reinforcement Learning
-#   - Strategic Reasoning
-#   - Academic Research
-#   - Artificial Intelligence
-#   - Machine Learning
+# SEO keywords
+keywords:
+  - Large Language Models
+  - Natural Language Processing
+  - Model Compression
+  - Efficient Training
+  - Efficient Inference
+  - ISCAS
+  - Qingyu Zhang
 
 sections:
   - block: about.biography
     id: about
     content:
       title: Biography
+      # The username directs to the user profile found in `content/authors/admin/`
       username: admin
-  # - block: skills
-  #   id: skills
-  #   content:
-  #     title: Skills
-  #     text: ''
-  #     username: admin
-  #   design:
-  #     columns: '1'
-  
-  # - block: experience
-  #   content:
-  #     title: Experience
-  #     # Date format for experience
-  #     #   Refer to https://docs.hugoblox.com/customization/#date-format
-  #     date_format: Jan 2006
-  #     # Experiences.
-  #     #   Add/remove as many `experience` items below as you like.
-  #     #   Required fields are `title`, `company`, and `date_start`.
-  #     #   Leave `date_end` empty if it's your current employer.
-  #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-  #     items:
-  #       - title: CEO
-  #         company: GenCoin
-  #         company_url: ''
-  #         company_logo: org-gc
-  #         location: California
-  #         date_start: '2021-01-01'
-  #         date_end: ''
-  #         description: |2-
-  #             Responsibilities include:
 
-  #             * Analysing
-  #             * Modelling
-  #             * Deploying
-  #       - title: Professor of Semiconductor Physics
-  #         company: University X
-  #         company_url: ''
-  #         company_logo: org-x
-  #         location: California
-  #         date_start: '2016-01-01'
-  #         date_end: '2020-12-31'
-  #         description: Taught electronic engineering and researched semiconductor physics.
-  #   design:
-  #     columns: '2'
+  - block: experience
+    id: experience
+    content:
+      title: Experience
+      date_format: Jan 2006
+      # Experiences.
+      items:
+        - title: Algorithm Intern
+          company: Meituan
+          company_url: 'https://www.meituan.com/'
+          location: Beijing, China
+          date_start: '2024-12-01'
+          date_end: ''
+          description: |2-
+              * Led the R&D of an RL-based dialogue optimization system for large models.
+              * Deployed in a live business environment, increasing core business conversion rate by ~20%.
+              * Research submitted to AAAI 2026.
+        - title: Base Model Intern
+          company: Baichuan Intelligence
+          company_url: 'https://www.baichuan-ai.com/'
+          location: Beijing, China
+          date_start: '2024-01-01'
+          date_end: '2024-10-31'
+          description: |2-
+              * Investigated Transformer redundancy and proposed a layer-based pruning method (*ShortGPT*, ACL Findings 2025).
+              * Researched the lower bounds of RoPE Base (NeurIPS 2024).
+              * Proposed a novel "Needle in a Haystack" evaluation method (Patent Pending).
+        - title: Research Intern
+          company: Institute of Software, Chinese Academy of Sciences
+          company_url: 'http://www.iscas.ac.cn/'
+          location: Beijing, China
+          date_start: '2023-10-01'
+          date_end: '2024-09-30'
+          description: |2-
+              * Adapted and optimized SFT/DPO algorithms for the Megatron framework (ACL Demo 2025).
+              * Implemented large-scale distributed training on Ascend 910b using the ModelLink framework.
+    design:
+      columns: '2'
+  
   - block: markdown
     id: news
     content:
       title: News
-      subtitle: ""
+      subtitle: ''
       text: |
-            - **Jun 25, 2025** One paper "[Streamlining the Collaborative Chain of Models into A Single Forward Pass in Generation-Based Tasks](https://arxiv.org/abs/2502.11083)" is accepted by ACL 2025.
-            - **SEP 23, 2024** Honored to receive the First Class Scholarship in 2024. 
-            - **May 29, 2024** Honored as an Outstanding Graduate at Fuzhou University.
-            - **Mar 27, 2024** One paper "[An Implicit Semantic Enhanced Fine-Grained Fake News Detection Method Based on Large Language Models](https://crad.ict.ac.cn/cn/article/doi/10.7544/issn1000-1239.202330967?viewType=HTML)" is accepted by Journal of Computer Research and Development.
-            - **Dec 20, 2023** Honored to receive the National Scholarship in 2023.  
-
+        - **May, 2025** One paper "[*ShortGPT*](publication/shortgpt-acl2025/)" is accepted by ACL Findings 2025.
+        - **Sep, 2024** One paper "[*Base of RoPE Bounds Context Length*](publication/base-of-rope-neurips2024/)" is accepted by NeurIPS 2024.
+        - **Jun, 2024** Honored as an Outstanding Graduate at Fuzhou University.
+        - **May, 2023** Won the **First Prize** in the 10th ASC Student Supercomputer Challenge.
+        - **Nov, 2022** Won the **First Prize** in the 13th National College Student Mathematics Competition.
     design:
       view: compact
       columns: '2'
-      
-  
+
+  - block: collection
+    id: projects
+    content:
+      title: Projects
+      filters:
+        folders:
+          - project
+    design:
+      # Choose a view for the collection: card, compact, stream, showcase.
+      view: card
+      columns: '2'
       
   - block: collection
-    id: section-collection
+    id: publications
     content:
       title: Recent Publications
+      text: "Here are some of my recent publications. You can find the full list in my CV."
       filters:
         folders:
           - publication
-        exclude_featured: true
+        exclude_featured: false
     design:
       columns: '2'
       view: citation
@@ -105,36 +108,18 @@ sections:
     id: contact
     content:
       title: Contact
-      
-      email: isyuhaochen@mail.ustc.edu.cn
+      email: ttraveller2001@gmail.com
       address:
-        street: 100 Fuxing Road, High-Tech Zone
-        city: Hefei
-        region: Anhui, China
-        postcode: '230094'
-      office_hours:
-        - 'Monday to Friday 08:00 to 22:00'
-        - 'Saturday to Sunday 10:00 to 18:00'
-      coordinates: 
-        latitude: '31.82057311201721'
-        longitude: '117.1250753555994'  
+        street: No. 4, South Fourth Street, Zhongguancun
+        city: Beijing
+        region: Haidian District
+        postcode: '100190'
+        country: China
+        country_code: CN
+      coordinates:
+        latitude: '39.9837'
+        longitude: '116.327'
       autolink: true
     design:
       columns: '2'
-
-  # 
-  # - block: collection
-  #   id: featured
-  #   content:
-  #     title: Featured Publications
-  #     filters:
-  #       folders:
-  #         - publication
-  #       featured_only: true
-  #   design:
-  #     columns: '2'
-  #     view: card
-
-  
-  
 ---
