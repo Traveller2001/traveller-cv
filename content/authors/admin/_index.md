@@ -1,13 +1,13 @@
 ---
 # Display name
-title: Yuhao Chen
+title: Qingyu Zhang
 
 # # Name pronunciation (optional)
 # name_pronunciation: Chien Shiung Wu
 
 # Full name (for SEO)
-first_name: Yuhao
-last_name: Chen
+first_name: Qingyu
+last_name: Zhang
 
 # Status emoji
 status:
@@ -17,30 +17,29 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Master Student of Data Science
+role: Master Student of Computer Science and Technology
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: University of Science and Technology of China
-    url: https://www.ustc.edu.cn/
+  - name: Institute of Software Chinese Academy of Sciences
+    url: https://is.cas.cn/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Research interests include natural language processing, large language models and reinforcement learning.
+bio: Research interests include LLM Long Context and Post-training.
 
 # Interests to show in About widget
 interests:
-  - Natural Language Processing
-  - Large Language Models
-  - Social Media Analysis
-  - Multimodal Intelligence
+  - LLM Long Context
+  - LLM Post-training
+  - LLM Reinforcement Learning
 
 # Education to show in About widget
 education:
   courses:
-    - course: Master Student in Data Science
-      institution: School of Artificial Intelligence and Data Science, USTC
+    - course: Master Student in Computer Science and Technology
+      institution: Institute of Software Chinese Academy of Sciences
       year: 2024 - Present
-    - course: B.Eng. in Data Science 
+    - course: B.Eng. in Computer Science and Technology
       institution: College of Computer and Data Science, FZU
       year: 2020 - 2024
     
@@ -104,7 +103,7 @@ social:
   #   link: https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ
   - icon: github
     icon_pack: fab
-    link: https://github.com/isyuhaochen
+    link: https://github.com/Traveller2001
   # - icon: linkedin
   #   icon_pack: fab
   #   link: https://www.linkedin.com/
@@ -133,5 +132,5 @@ highlight_name: true
 #   - Academic Research
 ---
 
-I'm Yuhao Chen, a first-year master's student at <a href="https://bigdata.ustc.edu.cn/">State Key Laboratory of Cognitive Intelligence</a> in the <a href="https://saids.ustc.edu.cn">School of Artificial Intelligence and Data Science</a> at <a href="https://www.ustc.edu.cn/">University of Science and Technology of China</a>, advised by <a href="http://staff.ustc.edu.cn/~tongxu/index.html">Prof. Tong Xu</a>. My research focuses large language models and reinforcement learning. 
+I'm Qingyu Zhang, a first-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My research focuses on large language models. 
 {style="text-align: justify;"}
