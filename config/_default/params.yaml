@@ -17,8 +17,8 @@ marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: 'University of Science and Technology of China'
-    description: 'Yuhao Chen - Master''s student specializing in Natural Language Processing and Large Language Models at USTC. Research focus on enhancing reasoning capabilities of LLMs, document analysis, social media understanding, and strategic reasoning tasks.'
+    org_name: 'Institute of Software Chinese Academy of Sciences'
+    description: 'Qingyu Zhang - master''s student at the Chinese Information Processing Laboratory, Institute of Software,Chinese Academy of Sciences. My research focuses on enhancing large language models'' long-text capabilities and multi-turn dialogue abilities.'
     twitter: ''
   analytics:
     google_analytics: ''
