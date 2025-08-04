@@ -24,11 +24,8 @@ doi: ''
 # Schedule page publish date (NOT publication's date).
 publishDate: '2025-05-01T00:00:00Z'
 
-# Publication type.
-# Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
-# 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
-# 7 = Thesis; 8 = Patent
-publication_types: ['1']
+
+publication_types: ['Conference']
 
 # Publication name and optional abbreviated publication name.
 publication: "In *Findings of the Association for Computational Linguistics: ACL 2025*"
@@ -44,15 +41,36 @@ tags:
   - LLM Redundancy
 featured: true
 
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+image:
+  caption: 'Overview of ShortGPT'
+  focal_point: ''
+  preview_only: false
+
 # links:
 # - name: Custom Link
 #   url: http://example.org
 url_pdf: 'https://aclanthology.org/2025.findings-acl.1035.pdf' # Link to your PDF
-url_code: '' # Link to your code
-url_dataset: ''
-url_poster: ''
-url_project: ''
-url_slides: ''
-url_source: ''
-url_video: ''
+# url_code: '' # Link to your code
+# url_dataset: ''
+# url_poster: ''
+# url_project: ''
+# url_slides: ''
+# url_source: ''
+# url_video: ''
 ---
+
+### 方法介绍
+
+xxx
+
+{{< figure src="featured.png" title="图1：ShortGPT 模型概览" >}}
+
+### 实验结果
+
+xxx
+
+{{< figure src="featured.png" title="图2：不同剪枝方法的效果对比" >}}
+
+xxx
