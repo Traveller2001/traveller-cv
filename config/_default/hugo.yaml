@@ -3,10 +3,8 @@
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-# Website name
-title: 张清宇
-# Website URL
-baseURL: 'https://example.com/'
+title: Yuhao Chen # Website name
+baseURL: 'https://isyuhaochen.github.io/' # Website URL
 
 ############################
 ## LANGUAGE
@@ -16,6 +14,7 @@ defaultContentLanguage: en
 hasCJKLanguage: true
 defaultContentLanguageInSubdir: false
 removePathAccents: true
+disableLanguages: []
 
 ############################
 ## ADVANCED
@@ -23,8 +22,7 @@ removePathAccents: true
 
 enableGitInfo: false
 summaryLength: 30
-pagination:
-  pagerSize: 10
+paginate: 10
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>

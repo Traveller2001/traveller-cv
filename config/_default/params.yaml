@@ -4,6 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
+
 appearance:
   theme_day: minimal
   theme_night: minimal
@@ -11,12 +12,13 @@ appearance:
   font_size: L
 
 # SEO
+
 marketing:
   seo:
     site_type: Person
     local_business_type: ''
-    org_name: ''
-    description: '张清宇的个人学术简历网站'
+    org_name: 'University of Science and Technology of China'
+    description: 'Yuhao Chen - Master''s student specializing in Natural Language Processing and Large Language Models at USTC. Research focus on enhancing reasoning capabilities of LLMs, document analysis, social media understanding, and strategic reasoning tasks.'
     twitter: ''
   analytics:
     google_analytics: ''
@@ -28,20 +30,22 @@ marketing:
     baidu: ''
 
 # Site header
+
 header:
   navbar:
     enable: true
     align: l
     show_logo: true
-    show_language: false
+    show_language: true
     show_day_night: true
     show_search: true
     highlight_active_link: true
 
 # Site footer
+
 footer:
   copyright:
-    notice: '© {year} 张清宇. This work is licensed under {license}'
+    notice: '© {year} Yuhao Chen. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -49,12 +53,14 @@ footer:
       allow_commercial: false
 
 # Localization
+
 locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
   address_format: en-us
 
 # Site features
+
 features:
   syntax_highlighter:
     theme_light: github-light
@@ -64,7 +70,7 @@ features:
   privacy_pack:
     enable: false
   repository:
-    url: 'https://github.com/'
+    url: 'https://github.com/isyuhaochen/isyuhaochen.github.io'
     content_dir: content
     branch: main
   avatar:
@@ -72,14 +78,30 @@ features:
     shape: circle
   comment:
     provider: ''
+    disqus:
+      shortname: ''
+      show_count: true
+    commento:
+      url: ''
+    giscus:
+      repo: ''
+      repo_id: ''
+      category: ''
+      category_id: ''
   search:
     provider: wowchemy
+    algolia:
+      app_id: ''
+      api_key: ''
+      index_name: ''
+      show_logo: false
   map:
     provider: 'mapnik'
     api_key: ''
     zoom: 15
 
 # Extensions
+
 extensions:
   cms:
     branch: main
@@ -88,5 +110,7 @@ extensions:
     enable: true
 
 # Security
+
 security:
+  # Allow frame for embedding speaker notes in slides
   allow_frame: true
