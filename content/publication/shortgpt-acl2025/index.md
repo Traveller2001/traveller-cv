@@ -46,7 +46,7 @@ featured: true
 image:
   caption: 'Overview of ShortGPT'
   focal_point: ''
-  preview_only: false
+  preview_only: true
 
 # links:
 # - name: Custom Link
@@ -60,17 +60,3 @@ url_pdf: 'https://aclanthology.org/2025.findings-acl.1035.pdf' # Link to your PD
 # url_source: ''
 # url_video: ''
 ---
-
-### 方法介绍
-
-xxx
-
-{{< figure src="featured.png" title="图1：ShortGPT 模型概览" >}}
-
-### 实验结果
-
-xxx
-
-{{< figure src="featured.png" title="图2：不同剪枝方法的效果对比" >}}
-
-xxx
