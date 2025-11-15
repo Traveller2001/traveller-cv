@@ -14,7 +14,7 @@ status:
   icon: ☕️
 
 # Is this the primary user of the site?
-superuser: true
+superuser: false
 
 # Role/position/tagline
 role: 计算机科学与技术硕士研究生
@@ -133,5 +133,5 @@ highlight_name: true
 #   - Academic Research
 ---
 
-我是张清宇，<a href="https://is.cas.cn">中国科学院软件研究所</a><a href="https://www.icip.org.cn/">中文信息处理实验室</a>一年级硕士研究生。我的研究方向专注于大语言模型，包括长文本能力和多轮对话能力。
+我是张清宇，<a href="https://is.cas.cn">中国科学院软件研究所</a><a href="https://www.icip.org.cn/">中文信息处理实验室</a>二年级硕士研究生。我的研究方向专注于大语言模型，包括长文本能力和多轮对话能力等。
 {style="text-align: justify;"}
