@@ -40,16 +40,14 @@ sections:
       view: compact
       columns: '2'
 
-  - block: collection
+  - block: resume-experience
     id: experience
     content:
       title: Experience
-      filters:
-        folders:
-          - experience
+      username: admin
+      date_format: Jan 2006
     design:
       columns: '2'
-      view: compact
 
   - block: collection
     id: publications
