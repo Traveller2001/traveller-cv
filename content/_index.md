@@ -40,44 +40,16 @@ sections:
       view: compact
       columns: '2'
 
-  - block: experience
+  - block: collection
     id: experience
     content:
       title: Experience
-      date_format: Jan 2006
-      # Experiences.
-      items:
-        - title: Algorithm Intern
-          company: Meituan
-          company_url: 'https://www.meituan.com/'
-          location: Beijing, China
-          date_start: '2024-12-01'
-          date_end: ''
-          description: |2-
-              * Led the R&D of an RL-based dialogue optimization system for large models.
-              * Deployed in a live business environment, increasing core business conversion rate by ~20%.
-              * Research submitted to AAAI 2026.
-        - title: Foundation Model Intern
-          company: Baichuan Intelligence
-          company_url: 'https://www.baichuan-ai.com/'
-          location: Beijing, China
-          date_start: '2024-01-01'
-          date_end: '2024-10-31'
-          description: |2-
-              * Investigated Transformer redundancy and proposed a layer-based pruning method (**ShortGPT**, *ACL Findings*, 2025).
-              * Researched the lower bounds of RoPE Base (**Base of RoPE Bounds Context Length**, *NeurIPS*, 2024).
-              * Proposed a variant of the "Needle in a Haystack" evaluation method (Patent Granted).
-        - title: Research Intern
-          company: Institute of Software, Chinese Academy of Sciences
-          company_url: 'http://www.iscas.ac.cn/'
-          location: Beijing, China
-          date_start: '2023-10-01'
-          date_end: '2024-09-30'
-          description: |2-
-              * Adapted and optimized SFT/DPO algorithms for the Megatron framework (*ACL Demo*, 2025).
-              * Implemented large-scale distributed training on Ascend 910b using the ModelLink framework.
+      filters:
+        folders:
+          - experience
     design:
       columns: '2'
+      view: compact
 
   - block: collection
     id: publications
