@@ -31,6 +31,15 @@ tags:
   - Computer Vision
 featured: true
 
-# url_pdf: ''
-# url_code: ''
+# links:
+# - name: Custom Link
+#   url: http://example.org
+url_pdf: 'https://arxiv.org/pdf/2504.00502v2' # Link to your PDF
+# url_code: '' # Link to your code
+# url_dataset: ''
+# url_poster: ''
+# url_project: ''
+# url_slides: ''
+# url_source: ''
+# url_video: ''
 ---

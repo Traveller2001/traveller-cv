@@ -31,11 +31,9 @@ sections:
       title: News
       subtitle: ''
       text: |
+        - **May, 2025** One paper "[*ShortV*](publication/shortv-iccv2025)" is accepted by ICCV 2025.
         - **May, 2025** One paper "[*ShortGPT*](publication/shortgpt-acl2025/)" is accepted by ACL Findings 2025.
         - **Sep, 2024** One paper "[*Base of RoPE Bounds Context Length*](publication/base-of-rope-neurips2024/)" is accepted by NeurIPS 2024.
-        - **Jun, 2024** Honored as an Outstanding Graduate at Fuzhou University.
-        - **May, 2023** Won the **First Prize** in the 10th ASC Student Supercomputer Challenge.
-        - **Nov, 2022** Won the **First Prize** in the 13th National College Student Mathematics Competition.
     design:
       view: compact
       columns: '2'
@@ -104,6 +102,18 @@ sections:
       view: card
       columns: '2'
       
+  - block: markdown
+    id: Awards
+    content:
+      title: News
+      subtitle: ''
+      text: |
+        - **Jun, 2024** Honored as an Outstanding Graduate at Fuzhou University.
+        - **May, 2023** Won the **First Prize** in the 10th ASC Student Supercomputer Challenge.
+        - **Nov, 2022** Won the **First Prize** in the 13th National College Student Mathematics Competition.
+    design:
+      view: compact
+      columns: '2'
 
   - block: contact
     id: contact
