@@ -1,13 +1,13 @@
 ---
 # Display name
-title: Qingyu Zhang
+title: 张清宇
 
 # # Name pronunciation (optional)
 # name_pronunciation: Chien Shiung Wu
 
 # Full name (for SEO)
-first_name: Qingyu
-last_name: Zhang
+first_name: 清宇
+last_name: 张
 
 # Status emoji
 status:
@@ -17,31 +17,31 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Master Student of Computer Science and Technology
+role: 计算机科学与技术硕士研究生
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Institute of Software Chinese Academy of Sciences
+  - name: 中国科学院软件研究所
     url: https://is.cas.cn/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Research interests include LLM Long Context and Post-training.
+bio: 研究方向包括大语言模型长文本能力和训练后优化。
 
 # Interests to show in About widget
 interests:
-  - LLM Long Context
-  - LLM Compression & Efficiency
-  - LLM Post-training
-  - LLM Reinforcement Learning
+  - 大语言模型长文本
+  - 大语言模型压缩与效率
+  - 大语言模型训练后优化
+  - 大语言模型强化学习
 
 # Education to show in About widget
 education:
   courses:
-    - course: M.S. in Computer Science and Technology
-      institution: Institute of Software Chinese Academy of Sciences
-      year: 2024 - Present
-    - course: B.S. in Computer Science and Technology
-      institution: College of Computer and Data Science, Fuzhou University
+    - course: 计算机科学与技术硕士
+      institution: 中国科学院软件研究所
+      year: 2024 - 至今
+    - course: 计算机科学与技术学士
+      institution: 福州大学计算机与大数据学院
       year: 2020 - 2024
     
 
@@ -133,5 +133,5 @@ highlight_name: true
 #   - Academic Research
 ---
 
-I'm Qingyu Zhang, a first-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My research focuses on large language models, including long-text capabilities and multi-turn dialogue abilities.
+我是张清宇，<a href="https://is.cas.cn">中国科学院软件研究所</a><a href="https://www.icip.org.cn/">中文信息处理实验室</a>一年级硕士研究生。我的研究方向专注于大语言模型，包括长文本能力和多轮对话能力。
 {style="text-align: justify;"}
