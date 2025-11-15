@@ -1,5 +1,7 @@
 ---
 title: Research Intern
+summary: Adapted and optimized SFT/DPO algorithms for the Megatron framework.
+date: '2023-10-01'
 company: Institute of Software, Chinese Academy of Sciences
 company_url: 'http://www.iscas.ac.cn/'
 location: Beijing, China

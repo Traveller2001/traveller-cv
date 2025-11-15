@@ -1,5 +1,7 @@
 ---
 title: Foundation Model Intern
+summary: Investigated Transformer redundancy and proposed layer-based pruning methods.
+date: '2024-01-01'
 company: Baichuan Intelligence
 company_url: 'https://www.baichuan-ai.com/'
 location: Beijing, China

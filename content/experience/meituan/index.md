@@ -1,5 +1,7 @@
 ---
 title: Algorithm Intern
+summary: Led the R&D of an RL-based dialogue optimization system for large models.
+date: '2024-12-01'
 company: Meituan
 company_url: 'https://www.meituan.com/'
 location: Beijing, China
