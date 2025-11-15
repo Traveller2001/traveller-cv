@@ -7,26 +7,3 @@ en:
   languageCode: en-us
   title: 'Qingyu Zhang'
   weight: 1
-
-# Chinese language
-zh:
-  languageCode: zh-Hans
-  contentDir: content/zh
-  title: '张清宇'
-  weight: 2
-  params:
-    description: '张清宇 - 中科院软件所中文信息处理实验室硕士研究生。研究方向专注于增强大语言模型的长文本能力、对轮对话能力等。'
-  menu:
-    main:
-      - name: 首页
-        url: '#about'
-        weight: 10
-      - name: 最新消息
-        url: '#news'
-        weight: 20
-      - name: 近期发表
-        url: '#publications'
-        weight: 25
-      - name: 联系方式
-        url: '#contact'
-        weight: 30
