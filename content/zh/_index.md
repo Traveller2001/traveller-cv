@@ -14,8 +14,6 @@ keywords:
   - 长文本
   - 预训练后微调
   - 强化学习
-  - 中科院软件所
-  - 张清宇
 
 sections:
   - block: about.biography
@@ -88,6 +86,7 @@ sections:
         folders:
           - publication
         exclude_featured: false
+        exclude_translations: true
     design:
       columns: '2'
       view: citation
