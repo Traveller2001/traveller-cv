@@ -103,9 +103,9 @@ sections:
       columns: '2'
       
   - block: markdown
-    id: Awards
+    id: awards
     content:
-      title: News
+      title: Awards
       subtitle: ''
       text: |
         - **Jun, 2024** Honored as an Outstanding Graduate at Fuzhou University.
