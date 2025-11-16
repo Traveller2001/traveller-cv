@@ -12,6 +12,17 @@ date: "2024-09-30"
 # Optional external URL for project (e.g. website, source code, or demo)
 external_link: ''
 
+# Links
+links:
+  - icon: file-pdf
+    icon_pack: fas
+    name: Paper
+    url: 'https://aclanthology.org/2025.acl-demo.19.pdf'
+  - icon: github
+    icon_pack: fab
+    name: Code
+    url: 'https://github.com/icip-cas/AutoAlign'
+
 image:
   caption: ''
   focal_point: Smart
