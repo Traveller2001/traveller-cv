@@ -31,7 +31,7 @@ sections:
       title: News
       subtitle: ''
       text: |
-        - **Nov, 2025** Open-sourced [*ShortX*](https://github.com/Traveller2001/ShortX) project, a unified pruning toolkit for AI models.
+        - **Nov, 2025** Open-sourced [*ShortX*](https://github.com/icip-cas/ShortX) project, a unified pruning toolkit for AI models.
         - **Jun, 2025** Contributed to [*AutoAlign*](https://github.com/icip-cas/AutoAlign) project, an open-source toolkit for automated LLM alignment.
         - **May, 2025** One paper "[*ShortV*](publication/shortv-iccv2025)" is accepted by ICCV 2025.
         - **May, 2025** One paper "[*ShortGPT*](publication/shortgpt-acl2025/)" is accepted by ACL Findings 2025.
