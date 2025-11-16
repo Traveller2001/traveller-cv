@@ -82,7 +82,7 @@ sections:
     id: publications
     content:
       title: Recent Publications
-      text: "Here are some of my recent publications. You can find the full list in my CV."
+      # text: "Here are some of my recent publications. You can find the full list in my CV."
       filters:
         folders:
           - publication
