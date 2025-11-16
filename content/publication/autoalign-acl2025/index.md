@@ -37,6 +37,6 @@ tags:
   - Open Source Toolkit
 featured: true
 
-# url_pdf: ''
-# url_code: ''
+url_pdf: 'https://aclanthology.org/2025.acl-demo.19.pdf'
+url_code: 'https://github.com/icip-cas/AutoAlign'
 ---
