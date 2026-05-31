@@ -37,7 +37,7 @@ interests:
 education:
   courses:
     - course: M.S. in Computer Science and Technology
-      institution: 'Institute of Software, CAS (Advisor: Prof. Xianpei Han)'
+      institution: Institute of Software, CAS
       year: 2024 - Present
     - course: B.S. in Computer Science and Technology
       institution: College of Computer and Data Science, Fuzhou University
