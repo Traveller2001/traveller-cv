@@ -276,6 +276,10 @@ body.dark #navbar-main.navbar {
 .pub-citation-body {
   min-width: 0;
 }
+.pub-citation-body .pub-title {
+  color: var(--nv-navy);
+  font-weight: 700;
+}
 .pub-citation-body p {
   margin: 0.7rem 0 0;
 }
