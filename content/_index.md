@@ -21,7 +21,7 @@ sections:
   - block: about.biography
     id: about
     content:
-      title: Biography
+      title: ''
       # The username directs to the user profile found in `content/authors/admin/`
       username: admin
 
