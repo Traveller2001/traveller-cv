@@ -132,7 +132,7 @@ highlight_name: true
 #   - Academic Research
 ---
 
-I'm Qingyu Zhang, a second-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My current research focuses on AI sales and customer-service agents, especially reliable multi-turn interaction and evaluation in real-world business scenarios.
+I'm Qingyu Zhang, a second-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My current research focuses on AI sales and customer-service agents, especially reliable multi-turn interaction and evaluation in real-world business scenarios. I am also <strong>actively exploring User Agents for realistic evaluation and multi-turn interaction</strong>.
 {style="text-align: justify;"}
 
 My internship experience spans foundation-model pretraining at Baichuan Intelligence, post-training and dialogue optimization at Meituan, and building user agents for evaluation and multi-turn training at ByteDance. Along the way, I have worked on <strong>AI-Salesman</strong> for reliable LLM-driven telemarketing, <strong>ShortGPT</strong> for layer pruning and model efficiency, and open-source toolkits such as <strong>AutoAlign</strong> and <strong>ShortX</strong>.
