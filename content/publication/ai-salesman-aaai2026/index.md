@@ -45,7 +45,7 @@ image:
 # links:
 # - name: Custom Link
 #   url: http://example.org
-url_pdf: 'https://ojs.aaai.org/index.php/AAAI/article/download/40781/44742' # Link to your PDF
+url_pdf: 'https://arxiv.org/pdf/2511.12133' # Link to your PDF
 # url_code: '' # Link to your code
 # url_dataset: ''
 # url_poster: ''
