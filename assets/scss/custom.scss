@@ -250,6 +250,36 @@ body.dark #navbar-main.navbar {
   overflow: hidden;
   transition: transform 0.3s var(--nv-ease), box-shadow 0.3s var(--nv-ease), border-color 0.3s var(--nv-ease);
 }
+.pub-list-item.view-citation.has-pub-teaser {
+  display: grid;
+  grid-template-columns: minmax(150px, 30%) minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: center;
+}
+.pub-teaser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: stretch;
+  min-height: 120px;
+  overflow: hidden;
+  border: 1px solid rgba(19, 41, 75, 0.1);
+  border-radius: 10px;
+  background: #f8fafc;
+}
+.pub-teaser img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: 150px;
+  object-fit: contain;
+}
+.pub-citation-body {
+  min-width: 0;
+}
+.pub-citation-body p {
+  margin: 0.7rem 0 0;
+}
 // gold rail on the left edge, revealed on hover
 .pub-list-item.view-citation::before {
   content: "";
@@ -277,6 +307,18 @@ body.dark #navbar-main.navbar {
 .pub-list-item .article-metadata a {
   color: var(--nv-navy);
   font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .pub-list-item.view-citation.has-pub-teaser {
+    grid-template-columns: 1fr;
+  }
+  .pub-teaser {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+  .pub-teaser img {
+    max-height: none;
+  }
 }
 
 // ---- Project / collection cards ------------------------------------
