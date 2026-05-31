@@ -12,14 +12,6 @@ authors:
 - Qianlong Xie
 - Xingxing Wang
 
-# Author notes (optional)
-author_notes:
-- "Equal contribution"
-- "Equal contribution"
-- ""
-- ""
-- "Corresponding author"
-
 date: '2026-02-01T00:00:00Z' # Publication date
 doi: ''
 
