@@ -36,13 +36,21 @@
       <div class="card">
         <div class="card-body">
 
-          {{- if .company_logo}}
-          {{- $svg_icon := resources.Get (printf "media/icons/brands/%s.svg" .company_logo) -}}
-          {{ if not $svg_icon }}{{ errorf "Brand logo not found at `assets/media/icons/brands/%s.svg`" .company_logo }}{{end}}
+          {{- $company_logo := .company_logo -}}
+          {{- $logo := "" -}}
+          {{- if $company_logo -}}
+            {{- range slice "png" "jpg" "jpeg" "webp" "svg" -}}
+              {{- with resources.Get (printf "media/icons/brands/%s.%s" $company_logo .) -}}
+                {{- $logo = . -}}
+              {{- end -}}
+            {{- end -}}
+            {{- if not $logo }}{{ errorf "Brand logo not found at `assets/media/icons/brands/%s.{png,jpg,jpeg,webp,svg}`" $company_logo }}{{end -}}
+          {{- end -}}
+          {{- if $logo}}
           <div class="d-flex align-content-start">
             <div class="mr-2 mb-2">
               {{- with .company_url}}<a href="{{.}}" target="_blank" rel="noopener">{{end -}}
-              <img src="{{ $svg_icon.RelPermalink }}" width="56" height="56" alt="{{.company | plainify}}" loading="lazy">
+              <img class="company-logo" src="{{ $logo.RelPermalink }}" width="56" height="56" alt="{{.company | plainify}}" loading="lazy" style="display: block; width: 56px; min-width: 56px; max-width: none; height: 56px; padding: 6px; box-sizing: border-box; object-fit: contain; border: 1px solid var(--nv-line); border-radius: 10px; background: #fff;">
               {{- with .company_url}}</a>{{end -}}
             </div>
             <div>
@@ -65,7 +73,7 @@
                 {{end}}
               </div>
 
-          {{- if .company_logo}}
+          {{- if $logo}}
             </div>
           </div>
           {{end}}

@@ -31,6 +31,7 @@ sections:
       title: News
       subtitle: ''
       text: |
+        - **Dec, 2025** One paper "[*AI-Salesman*](publication/ai-salesman-aaai2026/)" is accepted by AAAI 2026 as **first author**.
         - **Nov, 2025** Open-sourced [*ShortX*](https://github.com/icip-cas/ShortX) project, a unified pruning toolkit for AI models.
         - **Jun, 2025** Contributed to [*AutoAlign*](https://github.com/icip-cas/AutoAlign) project, an open-source toolkit for automated LLM alignment.
         - **May, 2025** One paper "[*ShortV*](publication/shortv-iccv2025)" is accepted by ICCV 2025.
@@ -47,18 +48,30 @@ sections:
       # Experiences.
       items:
         - title: Algorithm Intern
-          company: Meituan
-          company_url: 'https://www.meituan.com/'
+          company: ByteDance
+          company_url: 'https://www.bytedance.com/'
+          company_logo: bytedance
           location: Beijing, China
-          date_start: '2024-12-01'
+          date_start: '2026-01-01'
           date_end: ''
           description: |2-
-              * Led the R&D of an RL-based dialogue optimization system for large models.
+              * Led the R&D of a **User Agent** framework supporting multi-turn evaluation needs across business lines, with over 80% of the generated evaluation data being business-usable.
+              * Exploring viable paradigms for applying the User Agent to multi-turn RL for Sales Agents.
+        - title: Algorithm Intern
+          company: Meituan
+          company_url: 'https://www.meituan.com/'
+          company_logo: meituan
+          location: Beijing, China
+          date_start: '2024-12-01'
+          date_end: '2026-01-31'
+          description: |2-
+              * Led the R&D of an RL-based dialogue optimization system for large models, building the full pipeline of training, inference, and evaluation.
               * Deployed in a live business environment, increasing core business conversion rate by 10%~20%.
-              * Research submitted to AAAI 2026.
+              * Published as **first author** (**AI-Salesman**, *AAAI*, 2026).
         - title: Foundation Model Intern
           company: Baichuan Intelligence
           company_url: 'https://www.baichuan-ai.com/'
+          company_logo: baichuan
           location: Beijing, China
           date_start: '2024-01-01'
           date_end: '2024-10-31'
@@ -69,6 +82,7 @@ sections:
         - title: Research Intern
           company: Institute of Software, Chinese Academy of Sciences
           company_url: 'http://www.iscas.ac.cn/'
+          company_logo: iscas
           location: Beijing, China
           date_start: '2023-10-01'
           date_end: '2024-09-30'

@@ -1,0 +1,418 @@
+// =====================================================================
+//  Navy & Gold — custom academic theme for Qingyu Zhang
+//  Injected via Hugo Blox official hook: main.scss `@import "custom";`
+//  Safe to remove: deleting this file reverts to stock styling.
+// =====================================================================
+
+// ---- Design tokens --------------------------------------------------
+:root {
+  --nv-navy: #13294b;        // primary deep navy
+  --nv-navy-deep: #0c1c34;   // darker navy
+  --nv-navy-soft: #2c4a7c;   // lifted navy for gradients
+  --nv-gold: #c9a24b;        // warm gold accent
+  --nv-gold-soft: #dab863;   // lighter gold (hover)
+  --nv-ink: #1f2733;         // body text
+  --nv-muted: #5b6675;       // secondary text
+  --nv-line: rgba(19, 41, 75, 0.10);
+  --nv-card-bg: #ffffff;
+  --nv-shadow-sm: 0 2px 8px rgba(19, 41, 75, 0.06);
+  --nv-shadow-md: 0 10px 30px rgba(19, 41, 75, 0.10);
+  --nv-shadow-lg: 0 18px 48px rgba(19, 41, 75, 0.16);
+  --nv-radius: 14px;
+  --nv-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+// ---- Global typography & rhythm ------------------------------------
+body {
+  color: var(--nv-ink);
+  letter-spacing: 0.005em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  color: var(--nv-navy);
+  letter-spacing: -0.012em;
+}
+
+// Section headings get a refined gold underline accent
+.section-heading h1 {
+  position: relative;
+  font-weight: 700;
+  padding-bottom: 0.6rem;
+  display: inline-block;
+}
+.section-heading h1::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 54px;
+  height: 3px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--nv-gold), var(--nv-gold-soft));
+  border-radius: 3px;
+}
+// Left-aligned section headings (2-column layout) align the accent left
+.section-heading.col-lg-4 h1::after {
+  left: 0;
+  transform: none;
+}
+.section-heading p {
+  color: var(--nv-muted);
+}
+
+// Smooth anchored scrolling so in-page nav feels intentional
+html {
+  scroll-behavior: smooth;
+}
+
+// ---- Navbar ---------------------------------------------------------
+#navbar-main.navbar {
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+  background: rgba(255, 255, 255, 0.82) !important;
+  border-bottom: 1px solid var(--nv-line);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6), var(--nv-shadow-sm);
+  transition: box-shadow 0.3s var(--nv-ease), background 0.3s var(--nv-ease);
+}
+#navbar-main .navbar-brand {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--nv-navy);
+}
+#navbar-main .nav-link {
+  font-weight: 500;
+  position: relative;
+  color: var(--nv-muted) !important;
+  transition: color 0.25s var(--nv-ease);
+}
+#navbar-main .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.2rem;
+  height: 2px;
+  background: linear-gradient(90deg, var(--nv-gold), var(--nv-gold-soft));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s var(--nv-ease);
+  border-radius: 2px;
+}
+#navbar-main .nav-link:hover,
+#navbar-main .nav-link.active {
+  color: var(--nv-navy) !important;
+}
+#navbar-main .nav-link:hover::after,
+#navbar-main .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+// Dark navbar variant
+.dark #navbar-main.navbar,
+body.dark #navbar-main.navbar {
+  background: rgba(17, 23, 35, 0.82) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+// ---- Links & inline accents ----------------------------------------
+.article-style a,
+.home-section a:not(.btn):not(.nav-link):not(.navbar-brand):not(.summary-link) {
+  color: var(--nv-navy);
+  text-decoration: none;
+  background-image: linear-gradient(var(--nv-gold), var(--nv-gold));
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+  transition: background-size 0.3s var(--nv-ease), color 0.2s var(--nv-ease);
+}
+.article-style a:hover,
+.home-section a:not(.btn):not(.nav-link):not(.navbar-brand):not(.summary-link):hover {
+  color: var(--nv-navy-soft);
+  background-size: 100% 1.5px;
+}
+
+// ---- Profile / About avatar ----------------------------------------
+#profile .avatar {
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--nv-gold), var(--nv-shadow-md);
+  transition: transform 0.4s var(--nv-ease), box-shadow 0.4s var(--nv-ease);
+}
+#profile .avatar:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--nv-gold-soft), var(--nv-shadow-lg);
+}
+#profile .portrait-title h2 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-top: 1rem;
+}
+#profile .portrait-title h3 {
+  color: var(--nv-muted);
+  font-weight: 500;
+}
+
+// Social network icons: gold lift on hover
+#profile .network-icon a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  color: var(--nv-navy);
+  background: rgba(19, 41, 75, 0.05);
+  transition: transform 0.25s var(--nv-ease), background 0.25s var(--nv-ease), color 0.25s var(--nv-ease);
+}
+#profile .network-icon a:hover {
+  transform: translateY(-3px);
+  background: var(--nv-navy);
+  color: var(--nv-gold-soft);
+}
+#profile .network-icon li {
+  margin: 0 0.15rem;
+}
+
+// Interests & education lists
+.ul-interests .fa-li,
+.ul-edu .fa-li {
+  color: var(--nv-gold);
+}
+.ul-edu .description .course {
+  font-weight: 600;
+  color: var(--nv-navy);
+}
+.ul-edu .description .institution {
+  color: var(--nv-muted);
+}
+.section-subheading {
+  color: var(--nv-navy);
+  font-weight: 700;
+}
+
+// ---- Experience timeline -------------------------------------------
+.experience .badge-pill {
+  background: #fff;
+  border-color: var(--nv-gold) !important;
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.18);
+}
+.experience .exp-fill {
+  background: var(--nv-gold) !important;
+  border-color: var(--nv-gold) !important;
+}
+.experience .border-right {
+  border-color: var(--nv-line) !important;
+}
+.experience .card {
+  border: 1px solid var(--nv-line);
+  border-radius: var(--nv-radius);
+  background: var(--nv-card-bg);
+  box-shadow: var(--nv-shadow-sm);
+  transition: transform 0.3s var(--nv-ease), box-shadow 0.3s var(--nv-ease), border-color 0.3s var(--nv-ease);
+}
+.experience .card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--nv-shadow-md);
+  border-color: rgba(201, 162, 75, 0.35);
+}
+.experience .exp-title {
+  color: var(--nv-navy) !important;
+  font-weight: 700;
+}
+.experience .exp-company {
+  color: var(--nv-gold) !important;
+  font-weight: 600 !important;
+}
+.experience .exp-meta {
+  font-size: 0.85rem;
+}
+.experience .company-logo {
+  width: 56px;
+  height: 56px;
+  padding: 6px;
+  object-fit: contain;
+  border: 1px solid var(--nv-line);
+  border-radius: 10px;
+  background: #fff;
+}
+
+// ---- Publication citation list -------------------------------------
+.pub-list-item.view-citation {
+  padding: 1.25rem 1.4rem;
+  border: 1px solid var(--nv-line);
+  border-radius: var(--nv-radius);
+  background: var(--nv-card-bg);
+  box-shadow: var(--nv-shadow-sm);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s var(--nv-ease), box-shadow 0.3s var(--nv-ease), border-color 0.3s var(--nv-ease);
+}
+// gold rail on the left edge, revealed on hover
+.pub-list-item.view-citation::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(var(--nv-gold), var(--nv-gold-soft));
+  transform: scaleY(0);
+  transform-origin: top center;
+  transition: transform 0.35s var(--nv-ease);
+}
+.pub-list-item.view-citation:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--nv-shadow-md);
+  border-color: rgba(201, 162, 75, 0.35);
+}
+.pub-list-item.view-citation:hover::before {
+  transform: scaleY(1);
+}
+.pub-list-item .pub-icon {
+  color: var(--nv-gold);
+}
+.pub-list-item .article-metadata a {
+  color: var(--nv-navy);
+  font-weight: 600;
+}
+
+// ---- Project / collection cards ------------------------------------
+.card-simple.view-card {
+  border: 1px solid var(--nv-line);
+  border-radius: var(--nv-radius);
+  overflow: hidden;
+  background: var(--nv-card-bg);
+  box-shadow: var(--nv-shadow-sm);
+  transition: transform 0.35s var(--nv-ease), box-shadow 0.35s var(--nv-ease), border-color 0.35s var(--nv-ease);
+}
+.card-simple.view-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--nv-shadow-lg);
+  border-color: rgba(201, 162, 75, 0.4);
+}
+.card-simple .article-title a,
+.card-simple .article-title {
+  color: var(--nv-navy);
+}
+.card-simple .img-hover-zoom img {
+  transition: transform 0.6s var(--nv-ease);
+}
+.card-simple .img-hover-zoom:hover img {
+  transform: scale(1.06);
+}
+
+// ---- Buttons & tags -------------------------------------------------
+.btn-links .btn,
+.btn-outline-primary {
+  border-radius: 999px;
+  border-color: var(--nv-navy);
+  color: var(--nv-navy);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: all 0.25s var(--nv-ease);
+}
+.btn-links .btn:hover,
+.btn-outline-primary:hover {
+  background: var(--nv-navy);
+  border-color: var(--nv-navy);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--nv-shadow-sm);
+}
+.badge,
+.article-tags .badge {
+  background: rgba(19, 41, 75, 0.06);
+  color: var(--nv-navy);
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+// ---- News / markdown content lists ---------------------------------
+// The News block is a markdown widget with a bulleted list. Restyle the
+// bullets as subtle gold markers and add breathing room.
+.home-section .article-style ul {
+  list-style: none;
+  padding-left: 0;
+}
+.home-section .article-style ul > li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+}
+.home-section .article-style ul > li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--nv-gold);
+  box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.15);
+}
+// Keep nested lists tidy
+.home-section .article-style ul ul {
+  margin-top: 0.4rem;
+}
+
+// ---- Contact section ------------------------------------------------
+.home-section .fa-ul .fa-li,
+#contact .fa-li {
+  color: var(--nv-gold);
+}
+
+// ---- Section background polish -------------------------------------
+// Add a faint top hairline between alternating sections for structure.
+.home-section + .home-section {
+  border-top: 1px solid var(--nv-line);
+}
+
+// ---- Footer ---------------------------------------------------------
+#site-footer,
+.site-footer {
+  color: var(--nv-muted);
+}
+
+// ---- Dark mode refinements -----------------------------------------
+.dark {
+  --nv-card-bg: hsl(218, 24%, 14%);
+  --nv-line: rgba(255, 255, 255, 0.08);
+  --nv-ink: rgba(255, 255, 255, 0.82);
+  --nv-muted: rgba(255, 255, 255, 0.55);
+  --nv-shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --nv-shadow-md: 0 12px 32px rgba(0, 0, 0, 0.45);
+  --nv-shadow-lg: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+.dark h1, .dark h2, .dark h3, .dark h4 {
+  color: #fff;
+}
+.dark .section-subheading,
+.dark .experience .exp-title,
+.dark .card-simple .article-title a,
+.dark .pub-list-item .article-metadata a {
+  color: #fff !important;
+}
+.dark #profile .network-icon a {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.85);
+}
+.dark #profile .network-icon a:hover {
+  background: var(--nv-gold);
+  color: var(--nv-navy-deep);
+}
+.dark .article-style a,
+.dark .home-section a:not(.btn):not(.nav-link):not(.navbar-brand):not(.summary-link) {
+  color: var(--nv-gold-soft);
+}
+
+// ---- Reduced motion -------------------------------------------------
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

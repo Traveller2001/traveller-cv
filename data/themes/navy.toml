@@ -1,0 +1,39 @@
+# Theme metadata
+# Custom "Navy & Gold" academic theme for Qingyu Zhang.
+# Deep navy primary with subtle warm-gold accents handled in assets/scss/custom.scss.
+name = "Navy"
+
+[light]
+  # Primary
+  primary = "#13294b"
+
+  # Links (deep navy; gold accents are applied via custom.scss)
+  link = "#13294b"
+  link_hover = "#0c1c34"
+
+  # Menu
+  menu_primary = "rgba(255, 255, 255, 0.85)"
+  menu_text = "#3a4a61"
+  menu_text_active = "#13294b"
+  menu_title = "#13294b"
+
+  # Home sections
+  home_section_odd = "rgb(255, 255, 255)"
+  home_section_even = "rgb(248, 249, 251)"
+
+[dark]
+  # Primary
+  primary = "#9db8e0"
+
+  link = "#c9a24b"
+  link_hover = "#dab863"
+
+  # Menu
+  menu_primary = "rgba(17, 23, 35, 0.85)"
+  menu_text = "rgba(255, 255, 255, 0.75)"
+  menu_text_active = "#ffffff"
+  menu_title = "#ffffff"
+
+  # Home sections
+  home_section_odd = "hsl(218, 24%, 12%)"
+  home_section_even = "hsl(218, 24%, 10%)"

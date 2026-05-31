@@ -25,20 +25,19 @@ organizations:
     url: https://is.cas.cn/
 
 # Short bio (displayed in user profile at end of posts)
-bio: Research interests include LLM Long Context and Post-training.
+bio: I work on AI sales and customer-service agents, with experience across LLM pretraining, post-training, evaluation, and model efficiency.
 
 # Interests to show in About widget
 interests:
   - LLM Long Context
   - LLM Compression & Efficiency
   - LLM Post-training
-  - LLM Reinforcement Learning
 
 # Education to show in About widget
 education:
   courses:
     - course: M.S. in Computer Science and Technology
-      institution: Institute of Software Chinese Academy of Sciences
+      institution: 'Institute of Software, CAS (Advisor: Prof. Xianpei Han)'
       year: 2024 - Present
     - course: B.S. in Computer Science and Technology
       institution: College of Computer and Data Science, Fuzhou University
@@ -133,5 +132,8 @@ highlight_name: true
 #   - Academic Research
 ---
 
-I'm Qingyu Zhang, a first-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My research focuses on large language models, including long-text capabilities and multi-turn dialogue abilities.
+I'm Qingyu Zhang, a second-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My current research focuses on AI sales and customer-service agents, especially reliable multi-turn interaction and evaluation in real-world business scenarios.
+{style="text-align: justify;"}
+
+My internship experience spans foundation-model pretraining at Baichuan Intelligence, post-training and dialogue optimization at Meituan, and building user agents for evaluation and multi-turn training at ByteDance. Along the way, I have worked on <strong>AI-Salesman</strong> for reliable LLM-driven telemarketing, <strong>ShortGPT</strong> for layer pruning and model efficiency, and open-source toolkits such as <strong>AutoAlign</strong> and <strong>ShortX</strong>.
 {style="text-align: justify;"}
