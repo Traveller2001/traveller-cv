@@ -12,8 +12,8 @@ authors:
 - Qianlong Xie
 - Xingxing Wang
 
-date: '2026-02-01T00:00:00Z' # Publication date
-doi: ''
+date: '2026-03-01T00:00:00Z' # Publication date
+doi: '10.1609/aaai.v40i41.40781'
 
 # Schedule page publish date (NOT publication's date).
 publishDate: '2025-12-01T00:00:00Z'
@@ -45,7 +45,7 @@ image:
 # links:
 # - name: Custom Link
 #   url: http://example.org
-# url_pdf: '' # Link to your PDF
+url_pdf: 'https://ojs.aaai.org/index.php/AAAI/article/download/40781/44742' # Link to your PDF
 # url_code: '' # Link to your code
 # url_dataset: ''
 # url_poster: ''
