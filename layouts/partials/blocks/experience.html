@@ -1,0 +1,54 @@
+{{/* Compact experience list — overrides the theme's card timeline.
+     Each item renders as a dense row: logo rail on the left, a single
+     header line (role · company · dates · location), then bullet notes. */}}
+
+{{ $page := .wcPage }}
+{{ $block := .wcBlock }}
+{{ $columns := $block.design.columns | default "1" }}
+
+<div class="col-12 {{if eq $columns "2"}}col-lg-8{{end}}">
+  {{ with $block.content.text }}{{ . | emojify | $page.RenderString }}{{ end }}
+
+  {{ if $block.content.items }}
+  <div class="exp-compact">
+    {{ range $idx, $item := $block.content.items }}
+    <div class="exp-item">
+      <div class="exp-rail">
+        {{- $company_logo := .company_logo -}}
+        {{- $logo := "" -}}
+        {{- if $company_logo -}}
+          {{- range slice "png" "jpg" "jpeg" "webp" "svg" -}}
+            {{- with resources.Get (printf "media/icons/brands/%s.%s" $company_logo .) -}}
+              {{- $logo = . -}}
+            {{- end -}}
+          {{- end -}}
+          {{- if not $logo }}{{ errorf "Brand logo not found at `assets/media/icons/brands/%s.{png,jpg,jpeg,webp,svg}`" $company_logo }}{{ end -}}
+        {{- end -}}
+        {{ if $logo }}
+          {{- with .company_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end -}}
+          <img class="exp-logo" src="{{ $logo.RelPermalink }}" width="44" height="44" alt="{{ .company | plainify }}" loading="lazy">
+          {{- with .company_url }}</a>{{ end -}}
+        {{ else }}
+          <span class="exp-dot{{ if not .date_end }} exp-dot-current{{ end }}"></span>
+        {{ end }}
+      </div>
+      <div class="exp-body">
+        <div class="exp-head">
+          <span class="exp-role">{{ .title | markdownify | emojify }}</span>
+          <span class="exp-sep">·</span>
+          <span class="exp-co">
+            {{- with .company_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .company | markdownify | emojify }}{{ with .company_url }}</a>{{ end -}}
+          </span>
+          <span class="exp-when">
+            {{ (time .date_start) | time.Format ($block.Params.date_format | default "Jan 2006") }} –
+            {{ if .date_end }}{{ (time .date_end) | time.Format ($block.Params.date_format | default "Jan 2006") }}{{ else }}{{ i18n "present" | default "Present" }}{{ end }}
+            {{- with .location }} · {{ . }}{{ end }}
+          </span>
+        </div>
+        {{ with .description }}<div class="exp-desc">{{ . | markdownify | emojify }}</div>{{ end }}
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>

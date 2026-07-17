@@ -68,6 +68,16 @@ html {
   scroll-behavior: smooth;
 }
 
+// ---- Compact section rhythm ----------------------------------------
+// The theme defaults to 110px vertical padding per section, which reads
+// as sparse. Tighten to a denser academic-homepage rhythm.
+.home-section {
+  padding: 3rem 0;
+}
+.section-heading h1 {
+  margin-bottom: 0.5rem;
+}
+
 // ---- Navbar ---------------------------------------------------------
 #navbar-main.navbar {
   backdrop-filter: saturate(180%) blur(12px);
@@ -191,57 +201,108 @@ body.dark #navbar-main.navbar {
   font-weight: 700;
 }
 
-// ---- Experience timeline -------------------------------------------
-.experience .badge-pill {
-  background: #fff;
-  border-color: var(--nv-gold) !important;
-  width: 14px;
-  height: 14px;
-  box-shadow: 0 0 0 3px rgba(201, 162, 75, 0.18);
+// ---- Experience: compact timeline list ------------------------------
+.exp-compact {
+  position: relative;
+  // gold-tinted rail connecting the logos
+  &::before {
+    content: "";
+    position: absolute;
+    left: 21px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(rgba(201, 162, 75, 0.45), rgba(19, 41, 75, 0.08));
+  }
 }
-.experience .exp-fill {
-  background: var(--nv-gold) !important;
-  border-color: var(--nv-gold) !important;
+.exp-item {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  padding: 0.65rem 0;
 }
-.experience .border-right {
-  border-color: var(--nv-line) !important;
+.exp-rail {
+  flex: 0 0 44px;
+  z-index: 1;
 }
-.experience .card {
-  border: 1px solid var(--nv-line);
-  border-radius: var(--nv-radius);
-  background: var(--nv-card-bg);
-  box-shadow: var(--nv-shadow-sm);
-  transition: transform 0.3s var(--nv-ease), box-shadow 0.3s var(--nv-ease), border-color 0.3s var(--nv-ease);
-}
-.experience .card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--nv-shadow-md);
-  border-color: rgba(201, 162, 75, 0.35);
-}
-.experience .exp-title {
-  color: var(--nv-navy) !important;
-  font-weight: 700;
-}
-.experience .exp-company {
-  color: var(--nv-gold) !important;
-  font-weight: 600 !important;
-}
-.experience .exp-meta {
-  font-size: 0.85rem;
-}
-.experience .company-logo {
-  width: 56px;
-  height: 56px;
-  padding: 6px;
+.exp-logo {
+  display: block;
+  width: 44px;
+  height: 44px;
+  padding: 5px;
   object-fit: contain;
   border: 1px solid var(--nv-line);
   border-radius: 10px;
   background: #fff;
+  box-shadow: var(--nv-shadow-sm);
+  transition: transform 0.25s var(--nv-ease), box-shadow 0.25s var(--nv-ease);
+}
+.exp-rail a:hover .exp-logo {
+  transform: translateY(-2px);
+  box-shadow: var(--nv-shadow-md);
+}
+.exp-dot {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 16px auto 0;
+  border-radius: 50%;
+  border: 2px solid var(--nv-gold);
+  background: #fff;
+}
+.exp-dot-current {
+  background: var(--nv-gold);
+}
+.exp-body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.exp-head {
+  line-height: 1.45;
+}
+.exp-role {
+  font-weight: 700;
+  color: var(--nv-navy);
+}
+.exp-sep {
+  color: var(--nv-muted);
+  margin: 0 0.15rem;
+}
+.exp-co,
+.exp-co a {
+  font-weight: 600;
+  color: var(--nv-gold);
+}
+.exp-when {
+  display: inline-block;
+  margin-left: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--nv-muted);
+}
+.exp-desc {
+  font-size: 0.92rem;
+  color: var(--nv-ink);
+  margin-top: 0.15rem;
+}
+.exp-desc ul {
+  margin-bottom: 0.2rem;
+}
+.exp-desc ul > li {
+  margin-bottom: 0.2rem !important;
+  line-height: 1.5 !important;
+}
+@media (max-width: 575.98px) {
+  .exp-compact::before {
+    display: none;
+  }
+  .exp-item {
+    gap: 0.75rem;
+  }
 }
 
 // ---- Publication citation list -------------------------------------
 .pub-list-item.view-citation {
-  padding: 1.25rem 1.4rem;
+  padding: 1rem 1.25rem;
   border: 1px solid var(--nv-line);
   border-radius: var(--nv-radius);
   background: var(--nv-card-bg);
@@ -250,28 +311,32 @@ body.dark #navbar-main.navbar {
   overflow: hidden;
   transition: transform 0.3s var(--nv-ease), box-shadow 0.3s var(--nv-ease), border-color 0.3s var(--nv-ease);
 }
+// Horizontal row: small teaser on the left, citation text on the right
 .pub-list-item.view-citation.has-pub-teaser {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
 }
 .pub-teaser {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  min-height: 180px;
-  margin-bottom: 1rem;
+  flex: 0 0 250px;
+  width: 250px;
   overflow: hidden;
   border: 1px solid rgba(19, 41, 75, 0.1);
   border-radius: 10px;
   background: #f8fafc;
-  aspect-ratio: 16 / 8;
+  aspect-ratio: 16 / 10;
 }
 .pub-teaser img {
   display: block;
   width: 100%;
   height: 100%;
-  max-height: 280px;
   object-fit: contain;
+}
+.pub-citation-body {
+  flex: 1 1 auto;
 }
 .pub-citation-body {
   min-width: 0;
@@ -311,13 +376,16 @@ body.dark #navbar-main.navbar {
   color: var(--nv-navy);
   font-weight: 600;
 }
-@media (max-width: 575.98px) {
-  .pub-teaser {
-    min-height: 140px;
-    aspect-ratio: 4 / 3;
+@media (max-width: 767.98px) {
+  .pub-list-item.view-citation.has-pub-teaser {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
   }
-  .pub-teaser img {
-    max-height: none;
+  .pub-teaser {
+    flex: 0 0 auto;
+    width: 100%;
+    aspect-ratio: 16 / 9;
   }
 }
 
@@ -407,6 +475,18 @@ body.dark #navbar-main.navbar {
   color: var(--nv-gold);
 }
 
+// ---- Scroll reveal ---------------------------------------------------
+// Classes are applied by custom JS; without JS nothing is hidden.
+.reveal-init {
+  opacity: 0;
+  transform: translateY(20px);
+}
+.reveal-in {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.7s var(--nv-ease), transform 0.7s var(--nv-ease);
+}
+
 // ---- Section background polish -------------------------------------
 // Add a faint top hairline between alternating sections for structure.
 .home-section + .home-section {
@@ -433,10 +513,13 @@ body.dark #navbar-main.navbar {
   color: #fff;
 }
 .dark .section-subheading,
-.dark .experience .exp-title,
+.dark .exp-role,
 .dark .card-simple .article-title a,
 .dark .pub-list-item .article-metadata a {
   color: #fff !important;
+}
+.dark .pub-teaser {
+  background: rgba(255, 255, 255, 0.04);
 }
 .dark #profile .network-icon a {
   background: rgba(255, 255, 255, 0.06);
