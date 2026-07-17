@@ -31,6 +31,7 @@ sections:
       title: News
       subtitle: ''
       text: |
+        - **Jul, 2026** One paper "[*ShortOPD*](publication/shortopd-arxiv2026/)" is released on arXiv as **first author**.
         - **Dec, 2025** One paper "[*AI-Salesman*](publication/ai-salesman-aaai2026/)" is accepted by AAAI 2026 as **first author**.
         - **Nov, 2025** Open-sourced [*ShortX*](https://github.com/icip-cas/ShortX) project, a unified pruning toolkit for AI models.
         - **Jun, 2025** Contributed to [*AutoAlign*](https://github.com/icip-cas/AutoAlign) project, an open-source toolkit for automated LLM alignment.
@@ -135,16 +136,6 @@ sections:
     content:
       title: Contact
       email: ttraveller2001@gmail.com
-      address:
-        street: No. 4, South Fourth Street, Zhongguancun
-        city: Beijing
-        region: Haidian District
-        postcode: '100190'
-        country: China
-        country_code: CN
-      coordinates:
-        latitude: '39.9837'
-        longitude: '116.327'
       autolink: true
     design:
       columns: '2'
