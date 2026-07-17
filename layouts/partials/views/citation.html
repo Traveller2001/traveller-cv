@@ -11,7 +11,7 @@
 
 <div class="pub-list-item view-citation{{ if $resource }} has-pub-teaser{{ end }}" style="margin-bottom: 1rem">
   {{ with $resource }}
-    {{ $image := .Fit "360x220" }}
+    {{ $image := .Fit "640x400" }}
     {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
     <a class="pub-teaser" href="{{ $link }}" {{ $target | safeHTMLAttr }} aria-label="{{ $item.Title }}">
       <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}" alt="{{ $item.Title }}" loading="lazy">
