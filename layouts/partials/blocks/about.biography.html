@@ -13,7 +13,9 @@
       {{ range $person.social }}
         {{ $label := .label | default (index (dict "envelope" "Email" "graduation-cap" "Google Scholar" "github" "GitHub") .icon) | default .icon }}
         {{ $external := hasPrefix .link "http" }}
-        <a href="{{ .link | safeURL }}" {{ if $external }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ $label }}<span aria-hidden="true">↗</span></a>
+        {{ $pack := .icon_pack | default "fas" }}
+        {{ $prefix := cond (in (slice "fas" "far" "fab" "fal") $pack) "fa" $pack }}
+        <a href="{{ .link | safeURL }}" {{ if $external }}target="_blank" rel="noopener noreferrer"{{ end }}><i class="profile-icon {{ $pack }} {{ $prefix }}-{{ .icon }}" aria-hidden="true"></i>{{ $label }}</a>
       {{ end }}
     </nav>
   </div>
@@ -31,12 +33,13 @@
   {{ with $person.interests }}
     <div class="profile-interests">
       <h2 class="detail-label">Research interests</h2>
-      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+      {{ $icons := dict "Agent" "robot" "LLM Long Context" "book-open" "LLM Compression & Efficiency" "compress-arrows-alt" "LLM Post-training" "sliders-h" }}
+      <ul>{{ range . }}<li><i class="profile-icon fas fa-{{ index $icons . | default "circle" }}" aria-hidden="true"></i><span>{{ . }}</span></li>{{ end }}</ul>
     </div>
   {{ end }}
   {{ with $person.education.courses }}
     <div class="profile-education">
-      <h2 class="detail-label">Education</h2>
+      <h2 class="detail-label"><i class="profile-icon fas fa-graduation-cap" aria-hidden="true"></i>Education</h2>
       <ul>{{ range . }}
         <li><div><strong>{{ .course }}</strong><span>{{ .institution }}</span></div><span class="education-year">{{ .year }}</span></li>
       {{ end }}</ul>

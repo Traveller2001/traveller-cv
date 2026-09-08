@@ -29,6 +29,7 @@ bio: I work on AI sales and customer-service agents, with experience across LLM 
 
 # Interests to show in About widget
 interests:
+  - Agent
   - LLM Long Context
   - LLM Compression & Efficiency
   - LLM Post-training
