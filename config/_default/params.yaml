@@ -8,7 +8,7 @@
 appearance:
   theme_day: navy
   theme_night: navy
-  font: minimal
+  font: native
   font_size: M
 
 # SEO
@@ -95,7 +95,7 @@ features:
       index_name: ''
       show_logo: false
   map:
-    provider: 'mapnik'
+    provider: ''
     api_key: ''
     zoom: 15
 

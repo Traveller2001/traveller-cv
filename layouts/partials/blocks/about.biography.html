@@ -1,0 +1,45 @@
+{{/* Content stays in the author page; this partial sets its hierarchy. */}}
+{{ $block := .wcBlock }}
+{{ $author := .author | default $block.content.username }}
+{{ $personPage := site.GetPage (printf "/authors/%s" $author) }}
+{{ $person := $personPage.Params }}
+{{ $avatar := ($personPage.Resources.ByType "image").GetMatch "*avatar*" }}
+<div class="about-layout">
+  <div class="about-copy">
+    <p class="profile-eyebrow">{{ $person.role }}</p>
+    <h1 class="profile-name">{{ $personPage.Title }}</h1>
+    <div class="profile-bio article-style">{{ $personPage.Content }}</div>
+    <nav class="profile-links" aria-label="Academic profiles and contact">
+      {{ range $person.social }}
+        {{ $label := .label | default (index (dict "envelope" "Email" "graduation-cap" "Google Scholar" "github" "GitHub") .icon) | default .icon }}
+        {{ $external := hasPrefix .link "http" }}
+        <a href="{{ .link | safeURL }}" {{ if $external }}target="_blank" rel="noopener noreferrer"{{ end }}>{{ $label }}<span aria-hidden="true">↗</span></a>
+      {{ end }}
+    </nav>
+  </div>
+  <aside class="profile-portrait">
+    {{ with $avatar }}
+      {{ $photo := .Fill "660x760 Center" }}
+      <img src="{{ $photo.RelPermalink }}" width="{{ $photo.Width }}" height="{{ $photo.Height }}" alt="Portrait of {{ $personPage.Title }}" fetchpriority="high">
+    {{ end }}
+    {{ range $person.organizations }}
+      <p class="portrait-affiliation">{{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}{{ .name }}{{ with .url }}</a>{{ end }}</p>
+    {{ end }}
+  </aside>
+</div>
+<div class="profile-details">
+  {{ with $person.interests }}
+    <div class="profile-interests">
+      <h2 class="detail-label">Research interests</h2>
+      <ul>{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+    </div>
+  {{ end }}
+  {{ with $person.education.courses }}
+    <div class="profile-education">
+      <h2 class="detail-label">Education</h2>
+      <ul>{{ range . }}
+        <li><div><strong>{{ .course }}</strong><span>{{ .institution }}</span></div><span class="education-year">{{ .year }}</span></li>
+      {{ end }}</ul>
+    </div>
+  {{ end }}
+</div>

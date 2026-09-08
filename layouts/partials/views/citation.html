@@ -1,5 +1,4 @@
 {{ $item := .item }}
-{{ $has_attachments := partial "functions/has_attachments" $item }}
 {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
 
 {{ $link := $item.RelPermalink }}
@@ -9,9 +8,18 @@
   {{ $target = "target=\"_blank\" rel=\"noopener\"" }}
 {{ end }}
 
-<div class="pub-list-item view-citation{{ if $resource }} has-pub-teaser{{ end }}" style="margin-bottom: 1rem">
+{{ $venue := $item.Params.publication_short | default $item.Params.publication | default "" }}
+{{ $venue = replaceRE "(?i)^In\\s+" "" $venue }}
+{{ $year := $item.Date.Format "2006" }}
+{{ $is_first_author := false }}
+{{ with $item.Params.authors }}
+  {{ $first_author := lower (index . 0) }}
+  {{ $is_first_author = or (eq $first_author "admin") (eq $first_author "qingyu zhang") }}
+{{ end }}
+
+<article class="pub-list-item view-citation{{ if $resource }} has-pub-teaser{{ end }}">
   {{ with $resource }}
-    {{ $image := .Fit "640x400" }}
+    {{ $image := .Fit "960x600" }}
     {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
     <a class="pub-teaser" href="{{ $link }}" {{ $target | safeHTMLAttr }} aria-label="{{ $item.Title }}">
       <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}" alt="{{ $item.Title }}" loading="lazy">
@@ -19,43 +27,19 @@
   {{ end }}
 
   <div class="pub-citation-body">
-    <i class="far fa-file-alt pub-icon" aria-hidden="true"></i>
-
-    {{/* APA Style */}}
-    {{ if eq (site.Params.publications.citation_style | default "apa") "apa" }}
-
-    <span class="article-metadata li-cite-author">
+    <div class="pub-venue">
+      {{ with $venue }}<span class="pub-venue-name">{{ . | markdownify }}</span>{{ end }}
+      {{ if not (in $venue $year) }}<span class="pub-year">{{ $year }}</span>{{ end }}
+      {{ if $is_first_author }}<span class="pub-role">First author</span>{{ end }}
+    </div>
+    <h3 class="pub-title">
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
+    </h3>
+    <div class="pub-authors article-metadata li-cite-author">
       {{ partial "page_metadata_authors" $item }}
-    </span>
-    ({{- $item.Date.Format "2006" -}}).
-    <a class="pub-title" href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>.
-    {{ if $item.Params.publication_short }}
-      {{- $item.Params.publication_short | markdownify -}}.
-    {{ else if $item.Params.publication }}
-      {{- $item.Params.publication | markdownify -}}.
-    {{ end }}
-    <p>{{ partial "page_links" (dict "page" $item "is_list" 1) }}</p>
-
-    {{/* MLA Style */}}
-    {{ else }}
-
-    <span class="article-metadata li-cite-author">
-      {{ partial "page_metadata_authors" $item }}.
-    </span>
-    <a class="pub-title" href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>.
-    {{ if $item.Params.publication_short }}
-      {{- $item.Params.publication_short | markdownify -}},
-    {{ else if $item.Params.publication }}
-      {{- $item.Params.publication | markdownify -}},
-    {{ end }}
-    {{- $item.Date.Format "2006" -}}.
-
-    {{ if $has_attachments }}
-    <div class="btn-links">
+    </div>
+    <div class="pub-actions btn-links">
       {{ partial "page_links" (dict "page" $item "is_list" 1) }}
     </div>
-    {{ end }}
-
-    {{ end }}
   </div>
-</div>
+</article>

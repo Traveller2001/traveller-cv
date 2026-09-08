@@ -1,39 +1,24 @@
-# Theme metadata
-# Custom "Navy & Gold" academic theme for Qingyu Zhang.
-# Deep navy primary with subtle warm-gold accents handled in assets/scss/custom.scss.
-name = "Navy"
+# Editorial palette; layout and typography are defined in custom.scss.
+name = "Editorial"
 
 [light]
-  # Primary
-  primary = "#13294b"
-
-  # Links (deep navy; gold accents are applied via custom.scss)
-  link = "#13294b"
-  link_hover = "#0c1c34"
-
-  # Menu
-  menu_primary = "rgba(255, 255, 255, 0.85)"
-  menu_text = "#3a4a61"
-  menu_text_active = "#13294b"
-  menu_title = "#13294b"
-
-  # Home sections
-  home_section_odd = "rgb(255, 255, 255)"
-  home_section_even = "rgb(248, 249, 251)"
+  primary = "#245dac"
+  link = "#245dac"
+  link_hover = "#18222d"
+  menu_primary = "#ffffff"
+  menu_text = "#606b77"
+  menu_text_active = "#245dac"
+  menu_title = "#18222d"
+  home_section_odd = "#ffffff"
+  home_section_even = "#ffffff"
 
 [dark]
-  # Primary
-  primary = "#9db8e0"
-
-  link = "#c9a24b"
-  link_hover = "#dab863"
-
-  # Menu
-  menu_primary = "rgba(17, 23, 35, 0.85)"
-  menu_text = "rgba(255, 255, 255, 0.75)"
-  menu_text_active = "#ffffff"
-  menu_title = "#ffffff"
-
-  # Home sections
-  home_section_odd = "hsl(218, 24%, 12%)"
-  home_section_even = "hsl(218, 24%, 10%)"
+  primary = "#97bff3"
+  link = "#97bff3"
+  link_hover = "#e9edf2"
+  menu_primary = "#171c23"
+  menu_text = "#a6b0bd"
+  menu_text_active = "#e9edf2"
+  menu_title = "#e9edf2"
+  home_section_odd = "#171c23"
+  home_section_even = "#171c23"

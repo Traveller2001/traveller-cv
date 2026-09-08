@@ -20,6 +20,29 @@
   {{ $summary = $item.Summary }}
 {{ end }}
 
+{{ if eq $item.Type "project" }}
+<article class="project-card">
+  {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
+  {{ with $resource }}
+    {{ $image := .Fit "960x600" }}
+    {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
+    <a class="project-image" href="{{ $link }}" {{ $target | safeHTMLAttr }} aria-label="{{ $item.Title }}">
+      <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}" alt="{{ $item.Title }}" loading="lazy">
+    </a>
+  {{ end }}
+  <div class="project-body">
+    <h3 class="project-title">
+      <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
+    </h3>
+    {{ with $summary }}<div class="project-summary article-style">{{ . }}</div>{{ end }}
+    {{ if $has_attachments }}
+    <div class="project-actions btn-links">
+      {{ partial "page_links" (dict "page" $item "is_list" 1) }}
+    </div>
+    {{ end }}
+  </div>
+</article>
+{{ else }}
 <div class="card-simple view-card">
 
   {{ if eq $item.Type "event" }}
@@ -73,3 +96,4 @@
   {{ end }}
 
 </div>
+{{ end }}

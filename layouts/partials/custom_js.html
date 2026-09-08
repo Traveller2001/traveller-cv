@@ -1,41 +1,7 @@
 <script>
-(function () {
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-  // ---- Scroll-reveal animations ----
-  if (reduceMotion || !('IntersectionObserver' in window)) return;
-
-  var selectors = [
-    '.section-heading',
-    '.pub-list-item',
-    '.exp-item',
-    '.card-simple.view-card',
-    '#news .article-style ul > li',
-    '#awards .article-style ul > li',
-    '#contact .card'
-  ];
-  var targets = Array.prototype.slice.call(document.querySelectorAll(selectors.join(',')));
-  if (!targets.length) return;
-
-  // Stagger siblings: delay grows with position among revealed siblings.
-  var groupIndex = new Map();
-  targets.forEach(function (el) {
-    var parent = el.parentNode;
-    var i = groupIndex.get(parent) || 0;
-    el.style.transitionDelay = Math.min(i * 90, 450) + 'ms';
-    groupIndex.set(parent, i + 1);
-    el.classList.add('reveal-init');
-  });
-
-  var io = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('reveal-in');
-      entry.target.classList.remove('reveal-init');
-      io.unobserve(entry.target);
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-
-  targets.forEach(function (el) { io.observe(el); });
-})();
+// The theme's hover dropdown races with Bootstrap's click handler.
+// Keep this menu click-operated so it also works with touch and keyboard.
+document.querySelectorAll('.theme-dropdown').forEach(function (menu) {
+  menu.classList.remove('dropdown');
+});
 </script>

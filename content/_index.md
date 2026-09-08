@@ -97,6 +97,7 @@ sections:
     id: publications
     content:
       title: Publications
+      count: 0
       # text: "Here are some of my recent publications. You can find the full list in my CV."
       filters:
         folders:
@@ -117,7 +118,7 @@ sections:
       # Choose a view for the collection: card, compact, stream, showcase.
       view: card
       columns: '2'
-      
+
   - block: markdown
     id: awards
     content:
@@ -139,4 +140,5 @@ sections:
       autolink: true
     design:
       columns: '2'
+
 ---
