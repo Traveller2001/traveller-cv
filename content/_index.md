@@ -5,17 +5,20 @@ date: 2024-08-05
 type: landing
 
 # SEO description for homepage
-description: 'Qingyu Zhang - Master''s student at the Institute of Software, Chinese Academy of Sciences (ISCAS). Research interests in Large Language Models, including long-text capabilities and multi-turn dialogue abilities.'
+description: 'Qingyu Zhang (张清宇), master''s student at the Institute of Software, Chinese Academy of Sciences (ISCAS). Research on LLM agents for reliable multi-turn conversation and on efficient large language models.'
 
 # SEO keywords
 keywords:
   - Large Language Models
+  - LLM Agents
+  - User Agent
   - Model Compression
   - Long Context
   - Post-training
   - Reinforcement Learning
   - ISCAS
   - Qingyu Zhang
+  - 张清宇
 
 sections:
   - block: about.biography
@@ -31,12 +34,12 @@ sections:
       title: News
       subtitle: ''
       text: |
-        - **Jul, 2026** One paper "[*ShortOPD*](publication/shortopd-arxiv2026/)" is released on arXiv as **first author**.
-        - **Dec, 2025** One paper "[*AI-Salesman*](publication/ai-salesman-aaai2026/)" is accepted by AAAI 2026 as **first author**.
-        - **Nov, 2025** Open-sourced [*ShortX*](https://github.com/icip-cas/ShortX) project, a unified pruning toolkit for AI models.
-        - **Jun, 2025** Contributed to [*AutoAlign*](https://github.com/icip-cas/AutoAlign) project, an open-source toolkit for automated LLM alignment.
-        - **May, 2025** One paper "[*ShortV*](publication/shortv-iccv2025)" is accepted by ICCV 2025.
-        - **May, 2025** One paper "[*ShortGPT*](publication/shortgpt-acl2025/)" is accepted by ACL Findings 2025.
+        - **Jul 2026** [ShortOPD](publication/shortopd-arxiv2026/) released on arXiv (first author).
+        - **Dec 2025** [AI-Salesman](publication/ai-salesman-aaai2026/) accepted to AAAI 2026 (first author).
+        - **Nov 2025** Open-sourced [ShortX](https://github.com/icip-cas/ShortX), a unified pruning toolkit for AI models.
+        - **Jun 2025** Contributed to [AutoAlign](https://github.com/icip-cas/AutoAlign), an open-source toolkit for automated LLM alignment.
+        - **May 2025** [ShortV](publication/shortv-iccv2025/) accepted to ICCV 2025.
+        - **May 2025** [ShortGPT](publication/shortgpt-acl2025/) accepted to ACL Findings 2025 (co-first author).
     design:
       view: compact
       columns: '2'
@@ -56,8 +59,8 @@ sections:
           date_start: '2026-01-01'
           date_end: ''
           description: |2-
-              * Led the R&D of a **User Agent** framework supporting multi-turn evaluation needs across business lines, with over 80% of the generated evaluation data being business-usable.
-              * Exploring viable paradigms for applying the User Agent to multi-turn RL for Sales Agents.
+              * Led the R&D of a **User Agent** framework for multi-turn evaluation across business lines; over 80% of the evaluation data it generates is directly usable by the business.
+              * Exploring how User Agents can power multi-turn RL for sales agents.
         - title: Algorithm Intern
           company: Meituan
           company_url: 'https://www.meituan.com/'
@@ -66,9 +69,9 @@ sections:
           date_start: '2024-12-01'
           date_end: '2026-01-31'
           description: |2-
-              * Led the R&D of an RL-based dialogue optimization system for large models, building the full pipeline of training, inference, and evaluation.
-              * Deployed in a live business environment, increasing core business conversion rate by 10%~20%.
-              * Published as **first author** (**AI-Salesman**, *AAAI*, 2026).
+              * Led the R&D of an RL-based dialogue optimization system for LLMs, covering the full training, inference, and evaluation pipeline.
+              * Deployed in live business, lifting the core conversion rate by 10–20%.
+              * Published as first author: **AI-Salesman** (*AAAI 2026*).
         - title: Foundation Model Intern
           company: Baichuan Intelligence
           company_url: 'https://www.baichuan-ai.com/'
@@ -77,9 +80,9 @@ sections:
           date_start: '2024-01-01'
           date_end: '2024-10-31'
           description: |2-
-              * Investigated Transformer redundancy and proposed a layer-based pruning method (**ShortGPT**, *ACL Findings*, 2025).
-              * Researched the lower bounds of RoPE Base (**Base of RoPE Bounds Context Length**, *NeurIPS*, 2024).
-              * Proposed a variant of the "Needle in a Haystack" evaluation method (Patent Granted).
+              * Studied layer redundancy in Transformers and proposed a layer-pruning method (**ShortGPT**, *ACL Findings 2025*).
+              * Studied the lower bound of the RoPE base for long context (**Base of RoPE Bounds Context Length**, *NeurIPS 2024*).
+              * Proposed a variant of the Needle-in-a-Haystack evaluation (patent granted).
         - title: Research Intern
           company: Institute of Software, Chinese Academy of Sciences
           company_url: 'http://www.iscas.ac.cn/'
@@ -88,8 +91,8 @@ sections:
           date_start: '2023-10-01'
           date_end: '2024-09-30'
           description: |2-
-              * Adapted and optimized SFT/DPO algorithms for the Megatron framework (*ACL Demo*, 2025).
-              * Implemented large-scale distributed training on Ascend 910b using the ModelLink framework.
+              * Adapted and optimized SFT/DPO for the Megatron framework (**AutoAlign**, *ACL Demo 2025*).
+              * Ran large-scale distributed training on Ascend 910B with the ModelLink framework.
     design:
       columns: '2'
 
@@ -125,9 +128,9 @@ sections:
       title: Awards
       subtitle: ''
       text: |
-        - **Jun, 2024** Honored as an Outstanding Graduate at Fuzhou University.
-        - **May, 2023** Won the **First Prize** in the 10th ASC Student Supercomputer Challenge.
-        - **Nov, 2022** Won the **First Prize** in the 13th National College Student Mathematics Competition.
+        - **Jun 2024** Outstanding Graduate, Fuzhou University.
+        - **May 2023** First Prize, 10th ASC Student Supercomputer Challenge.
+        - **Nov 2022** First Prize, 13th National College Student Mathematics Competition.
     design:
       view: compact
       columns: '2'

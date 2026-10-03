@@ -1,0 +1,19 @@
+{{/* Author list for publication pages. Equal-contribution and corresponding-author notes
+     render as * and † (the note text is kept as a tooltip) instead of info icons. */}}
+{{- $taxonomy := "authors" }}
+{{ if .Param $taxonomy }}
+  {{- $notes := .Params.author_notes | default slice -}}
+  {{ range $index, $value := (.GetTerms $taxonomy) }}
+    {{- $highlight_name := .Page.Params.highlight_name | default false -}}
+    {{- if gt $index 0 }}, {{ end -}}
+    {{- $name := .LinkTitle -}}
+    {{- $mark := "" -}}
+    {{- range slice "*" "†" }}{{ if strings.HasSuffix $name . }}{{ $mark = . }}{{ $name = strings.TrimSuffix . $name }}{{ end }}{{ end -}}
+    {{- $note := "" -}}
+    {{- if gt (len $notes) $index }}{{ $note = index $notes $index }}{{ end -}}
+    {{- with $note }}{{ if in (lower .) "equal" }}{{ $mark = "*" }}{{ else if in (lower .) "corresponding" }}{{ $mark = "†" }}{{ end }}{{ end -}}
+    <span{{ if $highlight_name }} class="author-highlighted"{{ end }}{{ with $note }} title="{{ . }}"{{ end }}>
+      {{- if .RelPermalink -}}<a href="{{ .RelPermalink }}">{{ $name }}</a>{{- else -}}{{ $name }}{{- end -}}
+    </span>{{ with $mark }}<sup>{{ . }}</sup>{{ end }}
+  {{- end -}}
+{{- end -}}

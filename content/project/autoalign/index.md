@@ -1,5 +1,5 @@
 ---
-title: AutoAlign - Automated Alignment Toolkit for LLMs
+title: "AutoAlign: Automated Alignment Toolkit for LLMs"
 summary: 'An open-source toolkit for automated alignment of Large Language Models. I was responsible for adapting and optimizing SFT/DPO algorithms for the Megatron framework.'
 tags:
 - Large Language Models

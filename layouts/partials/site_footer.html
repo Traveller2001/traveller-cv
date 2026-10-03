@@ -1,0 +1,6 @@
+{{/* One-line footer: copyright/licence notice on the left, builder credit on the right. */}}
+<footer class="site-footer">
+  {{ partial "blox-core/functions/get_hook" (dict "hook" "footer-start" "context" .) }}
+  {{ partial "site_footer_license" . }}
+  <p class="powered-by footer-credit">Built with <a href="https://hugoblox.com" target="_blank" rel="noopener">Hugo Blox</a></p>
+</footer>

@@ -1,3 +1,6 @@
+{{/* Publication entry for the homepage list: figure, venue + authorship, title, authors, links.
+     Authorship is derived from the data: listed first => "First author";
+     sharing the first author's equal-contribution note => "Co-first author". */}}
 {{ $item := .item }}
 {{ $resource := partial "blox-core/functions/get_featured_image.html" $item }}
 
@@ -9,36 +12,59 @@
 {{ end }}
 
 {{ $venue := $item.Params.publication_short | default $item.Params.publication | default "" }}
-{{ $venue = replaceRE "(?i)^In\\s+" "" $venue }}
+{{ $venue = replaceRE "(?i)^In\\s+" "" $venue | replaceRE "[*_]" "" }}
 {{ $year := $item.Date.Format "2006" }}
-{{ $is_first_author := false }}
-{{ with $item.Params.authors }}
-  {{ $first_author := lower (index . 0) }}
-  {{ $is_first_author = or (eq $first_author "admin") (eq $first_author "qingyu zhang") }}
-{{ end }}
+{{ if not (in $venue $year) }}{{ $venue = trim (printf "%s %s" $venue $year) " " }}{{ end }}
 
-<article class="pub-list-item view-citation{{ if $resource }} has-pub-teaser{{ end }}">
+{{ $authors := $item.Params.authors | default slice }}
+{{ $notes := $item.Params.author_notes | default slice }}
+{{ $me := -1 }}
+{{ range $i, $a := $authors }}
+  {{ if in (slice "admin" "qingyu zhang") (lower $a) }}{{ $me = $i }}{{ end }}
+{{ end }}
+{{ $role := "" }}
+{{ if eq $me 0 }}
+  {{ $role = "First author" }}
+{{ else if and (gt $me 0) (gt (len $notes) $me) }}
+  {{ $myNote := index $notes $me }}
+  {{ if and (in (lower $myNote) "equal") (eq $myNote (index $notes 0)) }}{{ $role = "Co-first author" }}{{ end }}
+{{ end }}
+{{ $myName := (site.GetPage "/authors/admin").Title | default "Qingyu Zhang" }}
+
+<article class="paper">
   {{ with $resource }}
     {{ $image := .Fit "960x600" }}
     {{ if ne $image.MediaType.SubType "gif" }}{{ $image = $image.Process "webp" }}{{ end }}
-    <a class="pub-teaser" href="{{ $link }}" {{ $target | safeHTMLAttr }} aria-label="{{ $item.Title }}">
-      <img src="{{ $image.RelPermalink }}" height="{{ $image.Height }}" width="{{ $image.Width }}" alt="{{ $item.Title }}" loading="lazy">
+    <a class="paper-figure" href="{{ $link }}" {{ $target | safeHTMLAttr }} tabindex="-1" aria-hidden="true">
+      <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="" loading="lazy">
     </a>
   {{ end }}
 
-  <div class="pub-citation-body">
-    <div class="pub-venue">
-      {{ with $venue }}<span class="pub-venue-name">{{ . | markdownify }}</span>{{ end }}
-      {{ if not (in $venue $year) }}<span class="pub-year">{{ $year }}</span>{{ end }}
-      {{ if $is_first_author }}<span class="pub-role">First author</span>{{ end }}
-    </div>
-    <h3 class="pub-title">
-      <a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a>
-    </h3>
-    <div class="pub-authors article-metadata li-cite-author">
-      {{ partial "page_metadata_authors" $item }}
-    </div>
-    <div class="pub-actions btn-links">
+  <div class="paper-body">
+    <p class="paper-meta">
+      {{ with $venue }}<span class="paper-venue">{{ . }}</span>{{ end }}
+      {{ with $role }}<span class="paper-role">{{ . }}</span>{{ end }}
+    </p>
+    <h3 class="paper-title"><a href="{{ $link }}" {{ $target | safeHTMLAttr }}>{{ $item.Title }}</a></h3>
+    <p class="paper-authors">
+      {{- range $i, $a := $authors -}}
+        {{- if gt $i 0 }}, {{ end -}}
+        {{- $isMe := in (slice "admin" "qingyu zhang") (lower $a) -}}
+        {{- $name := cond $isMe $myName $a -}}
+        {{- /* Some names carry their mark inline ("Xin Men*"); move it into a superscript. */ -}}
+        {{- $mark := "" -}}
+        {{- range slice "*" "†" -}}
+          {{- if strings.HasSuffix $name . }}{{ $mark = . }}{{ $name = strings.TrimSuffix . $name }}{{ end -}}
+        {{- end -}}
+        {{- $note := "" -}}
+        {{- if gt (len $notes) $i }}{{ $note = index $notes $i }}{{ end -}}
+        {{- with $note -}}
+          {{- if in (lower .) "equal" }}{{ $mark = "*" }}{{ else if in (lower .) "corresponding" }}{{ $mark = "†" }}{{ end -}}
+        {{- end -}}
+        <span{{ if $isMe }} class="me"{{ end }}{{ with $note }} title="{{ . }}"{{ end }}>{{ $name }}</span>{{ with $mark }}<sup>{{ . }}</sup>{{ end }}
+      {{- end -}}
+    </p>
+    <div class="paper-links btn-links">
       {{ partial "page_links" (dict "page" $item "is_list" 1) }}
     </div>
   </div>

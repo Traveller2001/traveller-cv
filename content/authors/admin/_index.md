@@ -9,6 +9,9 @@ title: Qingyu Zhang
 first_name: Qingyu
 last_name: Zhang
 
+# Chinese name, set vertically beside the portrait on the homepage (delete to hide)
+name_zh: 张清宇
+
 # Status emoji
 status:
   icon: ☕️
@@ -17,33 +20,34 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Master Student of Computer Science and Technology
+role: Master's Student in Computer Science
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Institute of Software Chinese Academy of Sciences
+  - name: Institute of Software, Chinese Academy of Sciences
     url: https://is.cas.cn/
 
-# Short bio (displayed in user profile at end of posts)
-bio: I work on AI sales and customer-service agents, with experience across LLM pretraining, post-training, evaluation, and model efficiency.
+# Short bio: the one-line statement under the name on the homepage
+# (also shown in the author card at the end of posts)
+bio: I build LLM agents that hold reliable multi-turn conversations in real-world settings, and I work on making large models more efficient.
 
 # Interests to show in About widget
 interests:
-  - Agent
-  - LLM Long Context
-  - LLM Compression & Efficiency
-  - LLM Post-training
+  - LLM agents
+  - Long context
+  - Model compression & efficiency
+  - Post-training
 
 # Education to show in About widget
 education:
   courses:
     - course: M.S. in Computer Science and Technology
-      institution: Institute of Software, CAS
-      year: 2024 - Present
+      institution: Institute of Software, Chinese Academy of Sciences
+      year: 2024 – Present
     - course: B.S. in Computer Science and Technology
-      institution: College of Computer and Data Science, Fuzhou University
-      year: 2020 - 2024
-    
+      institution: Fuzhou University
+      year: 2020 – 2024
+
 
 # Skills
 # For available icons, see: https://docs.hugoblox.com/getting-started/page-builder/#icons
@@ -133,8 +137,6 @@ highlight_name: true
 #   - Academic Research
 ---
 
-I'm Qingyu Zhang, a second-year master's student at <a href="https://www.icip.org.cn/">Chinese Information Processing Laboratory</a> in the <a href="https://is.cas.cn">Institute of Software Chinese Academy of Sciences</a>. My current research focuses on AI sales and customer-service agents, especially reliable multi-turn interaction and evaluation in real-world business scenarios. I am also <strong>actively exploring User Agents for realistic evaluation and multi-turn interaction</strong>.
-{style="text-align: justify;"}
+I'm a third-year master's student at the [Chinese Information Processing Laboratory](https://www.icip.org.cn/), [Institute of Software, Chinese Academy of Sciences](https://is.cas.cn). As an algorithm intern at ByteDance, I'm building **User Agents**: simulated users that make the evaluation of sales and customer-service agents more realistic and enable multi-turn reinforcement learning. Before that, I built [**AI-Salesman**]({{< relref "/publication/ai-salesman-aaai2026" >}}), an RL-driven sales-dialogue system deployed in production at Meituan (AAAI 2026).
 
-My internship experience spans foundation-model pretraining at Baichuan Intelligence, post-training and dialogue optimization at Meituan, and building user agents for evaluation and multi-turn training at ByteDance. Along the way, I have worked on <a href="/publication/ai-salesman-aaai2026/"><strong>AI-Salesman</strong></a> for reliable LLM-driven telemarketing, <a href="/publication/shortgpt-acl2025/"><strong>ShortGPT</strong></a> for layer pruning and model efficiency, and open-source toolkits such as <a href="/project/autoalign/"><strong>AutoAlign</strong></a> and <a href="/project/shortx/"><strong>ShortX</strong></a>.
-{style="text-align: justify;"}
+On model efficiency, my latest first-author work, [**ShortOPD**]({{< relref "/publication/shortopd-arxiv2026" >}}) (arXiv 2026), recovers the free-form generation ability of pruned LLMs through short-to-long on-policy distillation, at a fraction of the training cost. Earlier, at Baichuan Intelligence, I co-developed the layer-pruning method [**ShortGPT**]({{< relref "/publication/shortgpt-acl2025" >}}) (ACL Findings 2025). I also contribute to the open-source toolkits [**AutoAlign**]({{< relref "/project/autoalign" >}}) and [**ShortX**]({{< relref "/project/shortx" >}}).
